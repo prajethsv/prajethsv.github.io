@@ -33,9 +33,9 @@
 
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <!-- Showcase your films with video embeds or thumbnails -->
+    <!-- Showcase your films with embedded YouTube video -->
     <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/watch?v=AoYs05UCKIY&ab_channel=CityofBelmont" frameborder="0" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/AoYs05UCKIY" frameborder="0" allowfullscreen></iframe>
     </div>
   </section>
 
@@ -49,9 +49,5 @@
   </footer>
 
   <script src="script.js"></script> <!-- Link to your JavaScript file -->
-  <script src="smooth-scroll.min.js"></script> <!-- Link to Smooth Scroll library -->
-  <script>
-    new SmoothScroll('a[href*="#"]');
-  </script>
 </body>
 </html>
