@@ -1,40 +1,115 @@
-# My Film Portfolio
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Portfolio</title>
+    <style>
+        /* Reset some default styles */
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
 
-Welcome to my film portfolio! I'm [Your Name], a passionate filmmaker, and this is where I showcase my creative work and projects.
+        /* Set a background color and text color */
+        body {
+            background-color: #f0f0f0;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
 
-## About Me
+        /* Create a header with a background image */
+        header {
+            background-image: url('your-header-image.jpg');
+            background-size: cover;
+            text-align: center;
+            padding: 100px 0;
+        }
 
-I have a deep love for storytelling through film and believe in the power of visual storytelling to inspire and connect with people. I've worked on a variety of projects, including short films, documentaries, and music videos.
+        /* Style the header text */
+        header h1 {
+            font-size: 36px;
+            color: #fff;
+        }
 
-## Portfolio
+        /* Create a navigation menu */
+        nav {
+            background-color: #333;
+            text-align: center;
+        }
 
-### Short Films
+        nav ul {
+            list-style: none;
+            padding: 20px 0;
+        }
 
-- **Film Title 1**
-  - Description: Briefly describe the film, including its genre, storyline, and your role in the project.
-  - ![Film Screenshot](link-to-screenshot-image.jpg) (You can include screenshots)
+        nav li {
+            display: inline;
+            margin: 0 20px;
+        }
 
-- **Film Title 2**
-  - Description: Another short film description.
-  - ![Film Screenshot](link-to-screenshot-image.jpg)
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+        }
 
-### Documentaries
+        /* Create a container for your portfolio projects */
+        .portfolio-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
 
-- **Documentary Title 1**
-  - Description: Describe the documentary's subject matter, purpose, and your role as a filmmaker.
-  - ![Documentary Image](link-to-image.jpg)
+        /* Style individual portfolio items */
+        .portfolio-item {
+            margin-bottom: 30px;
+        }
 
-### Music Videos
+        /* Style your footer */
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer | Graphic Designer | Photographer</p>
+    </header>
 
-- **Music Video Title 1**
-  - Description: Explain the concept and creative direction behind the music video.
-  - ![Music Video Thumbnail](link-to-thumbnail.jpg)
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-## Contact
+    <div class="portfolio-container" id="portfolio">
+        <h2>Portfolio</h2>
+        <!-- Replace the following with your portfolio project items -->
+        <div class="portfolio-item">
+            <img src="project1.jpg" alt="Project 1">
+            <h3>Project 1</h3>
+            <p>Description of Project 1.</p>
+        </div>
+        <div class="portfolio-item">
+            <img src="project2.jpg" alt="Project 2">
+            <h3>Project 2</h3>
+            <p>Description of Project 2.</p>
+        </div>
+        <!-- Add more portfolio items as needed -->
+    </div>
 
-Feel free to reach out to me if you have any questions or would like to collaborate on a project. You can contact me at [your.email@example.com](mailto:your.email@example.com).
-
----
-
-Thank you for visiting my portfolio, and I hope you enjoy exploring my work!
-
+    <footer>
+        &copy; 2023 Your Name. All rights reserved.
+    </footer>
+</body>
+</html>
