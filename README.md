@@ -258,6 +258,7 @@ To run program
 ---
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 ## 🪞References
 
 -	GitHub Student Developer Pack: https://education.github.com/pack
@@ -267,4 +268,6 @@ To run program
 
 =======
 >>>>>>> 4944f62 (Initial setup)
+=======
+>>>>>>> d30c454 (Initial setup)
 
