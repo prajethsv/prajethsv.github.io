@@ -1,53 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prajeth Suresh Vijayalakshmi - Film Portfolio</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
-  <style>
-    /* Add custom styles specific to this page */
-  </style>
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#portfolio">Portfolio</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+# ICT171 Assignment 2 – Cloud Server Setup
 
-  <section id="home">
-    <h1>Prajeth Suresh Vijayalakshmi</h1>
-    <!-- Add a brief introduction or a captivating video here -->
-  </section>
+## Step 1: Launch the Cloud Server
+- Created an Ubuntu Server instance on AWS EC2.
+- Configured security groups to allow SSH and HTTP traffic.
 
-  <section id="about">
-    <h2>About</h2>
-    <!-- Add information about yourself and your filmmaking journey -->
-  </section>
+## Step 2: Install Apache2 Web Server
+- Ran `sudo apt update` and `sudo apt install apache2`.
+- Verified Apache was running by visiting the public IP in a browser.
 
-  <section id="portfolio">
-    <h2>Portfolio</h2>
-    <!-- Showcase your films with embedded YouTube video -->
-    <div class="video-container">
-      <iframe width="560" height="315" src="https://www.youtube.com/embed/AoYs05UCKIY" frameborder="0" allowfullscreen></iframe>
-    </div>
-  </section>
-
-  <section id="contact">
-    <h2>Contact</h2>
-    <!-- Add a contact form or provide your contact information -->
-  </section>
-
-  <footer>
-    <p>&copy; 2022 Prajeth Suresh Vijayalakshmi. All rights reserved.</p>
-  </footer>
-
-  <script src="script.js"></script> <!-- Link to your JavaScript file -->
-</body>
-</html>
+## Step 3: Secure the Server with UFW Firewall
+- Enabled UFW and allowed OpenSSH and Apache.
+- Commands used:
+  ```bash
+  sudo ufw allow OpenSSH
+  sudo ufw allow 'Apache Full'
+  sudo ufw enable
+  sudo ufw status
