@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Murdoch IT Hub</title>
+  <style>
+    body {
+      background: #121212;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      transition: background 0.5s, color 0.5s;
+    }
+    h1 {
+      animation: typing 2s steps(10, end);
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid white;
+      margin-bottom: 10px;
+    }
+    h2 {
+      margin-top: 50px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      font-size: 28px;
+    }
+    @keyframes typing {
+      from { width: 0 }
+      to { width: 100% }
+    }
+    /* Light mode styles */
+    body.light-mode {
+      background: white;
+      color: black;
+    }
+    /* Button style */
+    #toggle-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    /* Club filter input style */
+    #club-filter {
+      margin-top: 40px;
+      padding: 8px 12px;
+      width: 250px;
+      font-size: 16px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      background: #333;
+      color: white;
+      transition: background 0.5s, color 0.5s;
+    }
+    body.light-mode #club-filter {
+      background: #eee;
+      color: black;
+      border: 1px solid #999;
+    }
+    /* Club list styles */
+    #clubs {
+      margin-top: 30px;
+      text-align: left;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .club {
+      background: #222;
+      margin-bottom: 15px;
+      padding: 15px;
+      border-radius: 8px;
+      transition: background 0.5s, color 0.5s;
+    }
+    body.light-mode .club {
+      background: #ddd;
+      color: black;
+    }
+    .club h3 {
+      margin: 0 0 8px 0;
+    }
+    .club p {
+      margin: 4px 0;
+    }
+    .club a {
+      color: #4fc3f7;
+      text-decoration: none;
+    }
+    body.light-mode .club a {
+      color: #1976d2;
+    }
+    /* Degrees section */
+    #degrees {
+      margin: 40px auto;
+      max-width: 700px;
+      text-align: left;
+    }
+    #degrees ul {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    #degrees li {
+      margin-bottom: 12px;
+    }
+    #degrees a {
+      color: #4fc3f7;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+    }
+    body.light-mode #degrees a {
+      color: #1976d2;
+    }
+    #degrees a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to Murdoch IT Hub!</h1>
+  <p>This will be your guide to clubs, careers and courses 🔥</p>
+
+  <!-- Dark Mode Toggle Button -->
+  <button id="toggle-btn">Switch to Light Mode</button>
+
+  <!-- IT Degrees Section -->
+  <section id="degrees">
+    <h2>IT Degrees at Murdoch University</h2>
+    <ul>
+      <li><a href="https://www.murdoch.edu.au/study/courses/study-areas/information-technology" target="_blank">Information Technology Study Areas</a></li>
+      <li><a href="https://search.murdoch.edu.au/course-finder/?q=information%20technology&size=n_9_n" target="_blank">Full List of IT Courses</a></li>
+    </ul>
+  </section>
+
+  <!-- Club filter input -->
+  <input type="text" id="club-filter" placeholder="Filter clubs by name or email">
+
+  <!-- Club list -->
+  <div id="clubs">
+    <div class="club">
+      <h3>CO-OP, Murdoch Game Development Club</h3>
+      <p>Email: <a href="mailto:coopgamedevclub@gmail.com">coopgamedevclub@gmail.com</a></p>
+      <p>Discord: <a href="https://discord.com/invite/qmhUMRN" target="_blank">Join Discord</a></p>
+      <p>Facebook: <a href="https://www.facebook.com/groups/142336349433412/" target="_blank">Facebook Group</a></p>
+    </div>
+    <div class="club">
+      <h3>Murdoch IT Association</h3>
+      <p>Email: <a href="mailto:murdochitstudentassociation@gmail.com">murdochitstudentassociation@gmail.com</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/murdochitassociation/" target="_blank">Instagram</a></p>
+      <p>Events: <a href="https://campus.hellorubric.com/?s=8834" target="_blank">Event Page</a></p>
+    </div>
+  </div>
+
+  <script>
+    // Dark mode toggle
+    const btn = document.getElementById('toggle-btn');
+    const body = document.body;
+
+    btn.addEventListener('click', () => {
+      body.classList.toggle('light-mode');
+
+      if(body.classList.contains('light-mode')) {
+        btn.textContent = 'Switch to Dark Mode';
+      } else {
+        btn.textContent = 'Switch to Light Mode';
+      }
+    });
+
+    // Club filter functionality
+    const filterInput = document.getElementById('club-filter');
+    const clubs = document.querySelectorAll('.club');
+
+    filterInput.addEventListener('input', () => {
+      const filter = filterInput.value.toLowerCase();
+      clubs.forEach(club => {
+        const name = club.querySelector('h3').textContent.toLowerCase();
+        const email = club.querySelector('p a').textContent.toLowerCase();
+        if(name.includes(filter) || email.includes(filter)) {
+          club.style.display = '';
+        } else {
+          club.style.display = 'none';
+        }
+      });
+    });
+  </script>
+</body>
+</html>
