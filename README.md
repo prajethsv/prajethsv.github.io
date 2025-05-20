@@ -29,10 +29,15 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
   sudo ufw status
 ![image](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
 
-## Step 4: Upload the Website
-- Cloned my GitHub repo using `git clone` on the server.
-- Replaced the default Apache page with my custom `index.html` file.
+## ✅ Step 4: Upload the Website Files from GitHub
+
+- Cloned the GitHub repository containing my website to the server.
+- Navigated into the project folder to view contents.
 - Commands used:
   ```bash
-  sudo rm /var/www/html/index.html
-  sudo cp index.html /var/www/html/
+  cd ~
+  git clone https://github.com/prajethsv/prajethsv.github.io.git
+  cd prajethsv.github.io
+  ls
+
+
