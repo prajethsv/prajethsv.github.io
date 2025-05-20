@@ -1,4 +1,15 @@
 # ICT171 Assignment 2 – Cloud Server Setup
+# Murdoch IT Hub 💻🔥
+
+A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 server using GitHub Pages. This site helps Murdoch IT students explore degrees, clubs, and career resources.
+
+🔗 **Live Website:** [https://prajethsv.github.io](https://prajethsv.github.io)
+
+## Features
+- 🌑 Dark mode toggle (JavaScript)
+- 🎓 Links to Murdoch IT degrees
+- 🕹️ Club details and contact links
+- 🛠️ Hosted via Apache2 on Ubuntu server
 
 ## Step 1: Launch the Cloud Server
 - Created an Ubuntu Server instance on AWS EC2.
