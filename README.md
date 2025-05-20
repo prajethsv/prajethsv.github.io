@@ -29,15 +29,23 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
   sudo ufw status
 ![image](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
 
-## Step 4: Upload the Website Files from GitHub
+## Step 4: Deploy the Website from GitHub to Apache
 
-- Cloned the GitHub repository containing my website to the server.
-- Navigated into the project folder to view contents.
-- Commands used:
+To host my custom Murdoch IT Hub website on the cloud server, I pulled the code from GitHub and deployed it using Apache.
+
+- Connected to my EC2 Ubuntu server via SSH.
+
+- Navigated to the home directory:
   ```bash
   cd ~
   git clone https://github.com/prajethsv/prajethsv.github.io.git
   cd prajethsv.github.io
   ls
+  sudo cp index.html /var/www/html/index.html
+
+
+
+
+
 
 
