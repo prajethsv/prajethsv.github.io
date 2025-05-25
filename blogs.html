@@ -3,24 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Murdoch University Blogs</title>
+  <title>Murdoch IT Hub | Blog</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
     body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      margin: 20px;
-      background-color: #f9f9f9;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f5f8fa;
       color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #004a99;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 1.8rem;
+    }
+    nav {
+      background-color: #003366;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
     }
     .container {
       max-width: 900px;
-      margin: auto;
+      margin: 40px auto;
       background: white;
-      padding: 20px;
-      box-shadow: 0 0 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
     }
-    h1, h2 {
+    h2 a {
       color: #004a99;
+      text-decoration: none;
+    }
+    h2 a:hover {
+      text-decoration: underline;
     }
     .blog-post {
       margin-bottom: 40px;
@@ -36,18 +68,34 @@
       color: #555;
       margin-bottom: 10px;
     }
+    footer {
+      background-color: #004a99;
+      color: white;
+      text-align: center;
+      padding: 15px 0;
+      margin-top: 40px;
+    }
     a {
       color: #004a99;
-      text-decoration: none;
-    }
-    a:hover {
-      text-decoration: underline;
     }
   </style>
 </head>
 <body>
+
+  <header>
+    <h1>Murdoch IT Hub</h1>
+  </header>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="degrees.html">Degrees</a>
+    <a href="clubs.html">Clubs</a>
+    <a href="careers.html">Careers</a>
+    <a href="blog.html">Blog</a>
+  </nav>
+
   <div class="container">
-    <h1>Murdoch University Blogs</h1>
+    <h2>Latest Blog Posts</h2>
 
     <div class="blog-post">
       <h2>
@@ -58,10 +106,10 @@
       <p class="date">Posted on Tuesday 4 August 2020</p>
       <p class="topics">Topics: Campus Life, Information Technology</p>
       <p>
-        The job market is changing post-pandemic, with increased demand for <strong>soft skills</strong> like adaptability, leadership, communication, and problem-solving. In addition to these, <strong>technology skills</strong> such as coding, data literacy, and knowledge of cloud and blockchain are becoming essential. Virtual internships and online learning platforms such as <a href="https://www.coursera.org" target="_blank" rel="noopener">Coursera</a>, <a href="https://www.edx.org" target="_blank" rel="noopener">edX</a>, and <a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a> can help graduates build these skills from home.
+        The job market is changing post-pandemic, with increased demand for <strong>soft skills</strong> like adaptability, leadership, communication, and problem-solving. In addition to these, <strong>technology skills</strong> such as coding, data literacy, and knowledge of cloud and blockchain are becoming essential.
       </p>
       <p>
-        Graduates should showcase transferable skills through projects and tailor their resumes to highlight relevant knowledge for the evolving workplace.
+        Platforms like <a href="https://www.coursera.org" target="_blank">Coursera</a>, <a href="https://www.edx.org" target="_blank">edX</a>, and <a href="https://www.udemy.com" target="_blank">Udemy</a> can help graduates build these skills.
       </p>
     </div>
 
@@ -74,13 +122,17 @@
       <p class="date">Posted on Wednesday 6 May 2020</p>
       <p class="topics">Topics: Campus Life</p>
       <p>
-        The pandemic forced schools and universities to shift quickly to <strong>online learning</strong>, using tools like Google Classroom, Zoom, and MOOC platforms. While this digital shift has challenges such as maintaining student attention and delivering practical lessons, it also presents an opportunity for long-term innovation.
+        The pandemic forced schools and universities to shift quickly to <strong>online learning</strong>, using tools like Google Classroom, Zoom, and MOOCs. While this digital shift presents challenges, it also offers opportunities for long-term educational innovation.
       </p>
       <p>
-        Hybrid learning models combining in-person and online education may become the new norm, offering more affordable and flexible options for students worldwide.
+        Hybrid learning models may become the new norm, providing affordable and flexible options for students worldwide.
       </p>
     </div>
-
   </div>
+
+  <footer>
+    <p>&copy; 2025 Murdoch IT Hub. Built with ❤️ by students for students.</p>
+  </footer>
+
 </body>
 </html>
