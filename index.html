@@ -17,29 +17,43 @@
       overflow: hidden;
       border-right: 3px solid white;
       margin-bottom: 10px;
+      color: #d32f2f; /* Murdoch red */
     }
     h2 {
       margin-top: 50px;
       margin-bottom: 20px;
       font-weight: 600;
       font-size: 28px;
+      color: #d32f2f; /* Murdoch red */
     }
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
+
     /* Light mode styles */
     body.light-mode {
       background: white;
       color: black;
     }
+
     /* Button style */
     #toggle-btn {
       margin-top: 30px;
       padding: 10px 20px;
       cursor: pointer;
       font-size: 16px;
+      background-color: #fdd835; /* yellow accent */
+      border: none;
+      border-radius: 6px;
+      color: #000;
+      font-weight: bold;
     }
+    body.light-mode #toggle-btn {
+      background-color: #c62828; /* deep red for light mode */
+      color: white;
+    }
+
     /* Club filter input style */
     #club-filter {
       margin-top: 40px;
@@ -60,6 +74,7 @@
       color: black;
       border: 1px solid #999;
     }
+
     /* Club list styles */
     #clubs {
       margin-top: 30px;
@@ -69,11 +84,12 @@
       margin-right: auto;
     }
     .club {
-      background: #222;
+      background: #1e1e1e;
       margin-bottom: 15px;
       padding: 15px;
       border-radius: 8px;
       transition: background 0.5s, color 0.5s;
+      border-left: 5px solid #388e3c; /* green accent */
     }
     body.light-mode .club {
       background: #ddd;
@@ -81,17 +97,23 @@
     }
     .club h3 {
       margin: 0 0 8px 0;
+      color: #d32f2f;
     }
     .club p {
       margin: 4px 0;
     }
     .club a {
-      color: #4fc3f7;
+      color: #fdd835; /* yellow for links */
       text-decoration: none;
     }
-    body.light-mode .club a {
-      color: #1976d2;
+    .club a:hover {
+      text-decoration: underline;
+      color: #ffc107; /* softer yellow on hover */
     }
+    body.light-mode .club a {
+      color: #c62828;
+    }
+
     /* Degrees section */
     #degrees {
       margin: 40px auto;
@@ -106,17 +128,27 @@
       margin-bottom: 12px;
     }
     #degrees a {
-      color: #4fc3f7;
+      color: #fdd835;
       text-decoration: none;
       font-weight: 600;
       font-size: 18px;
     }
     body.light-mode #degrees a {
-      color: #1976d2;
+      color: #c62828;
     }
     #degrees a:hover {
       text-decoration: underline;
+      color: #ffeb3b;
     }
+
+    /* Blog section link */
+    #blog a {
+      color: #b39ddb; /* light purple */
+    }
+    #blog a:hover {
+      color: #ce93d8;
+    }
+
   </style>
 </head>
 <body>
@@ -127,26 +159,24 @@
   <button id="toggle-btn">Switch to Light Mode</button>
 
   <!-- IT Degrees Section -->
-<section id="degrees">
-  <h2>IT Degrees at Murdoch University</h2>
-  <ul>
-    <li><a href="https://www.murdoch.edu.au/study/courses/study-areas/information-technology" target="_blank">Information Technology Study Areas</a></li>
-    <li><a href="https://search.murdoch.edu.au/course-finder/?q=information%20technology&size=n_9_n" target="_blank">Full List of IT Courses</a></li>
-  </ul>
-</section>
+  <section id="degrees">
+    <h2>IT Degrees at Murdoch University</h2>
+    <ul>
+      <li><a href="https://www.murdoch.edu.au/study/courses/study-areas/information-technology" target="_blank">Information Technology Study Areas</a></li>
+      <li><a href="https://search.murdoch.edu.au/course-finder/?q=information%20technology&size=n_9_n" target="_blank">Full List of IT Courses</a></li>
+    </ul>
+  </section>
 
-<section id="blog">
-  <h2><a href="blogs.html" style="color: #b19cd9;">Visit the Alex Gee</a></h2>
-</section>
+  <section id="blog">
+    <h2><a href="blogs.html">Visit the Blog</a></h2>
+  </section>
 
+  <!-- Club filter input -->
+  <input type="text" id="club-filter" placeholder="Filter clubs by name or email">
 
-
-<!-- Club filter input -->
-<input type="text" id="club-filter" placeholder="Filter clubs by name or email">
-
-<!-- Club list -->
-<div id="clubs">
-  <div class="club">
+  <!-- Club list -->
+  <div id="clubs">
+    <div class="club">
       <h3>CO-OP, Murdoch Game Development Club</h3>
       <p>Email: <a href="mailto:coopgamedevclub@gmail.com">coopgamedevclub@gmail.com</a></p>
       <p>Discord: <a href="https://discord.com/invite/qmhUMRN" target="_blank">Join Discord</a></p>
@@ -161,14 +191,12 @@
   </div>
 
   <script>
-
     //This is the dark mode toggle///
     const btn = document.getElementById('toggle-btn');
     const body = document.body;
 
     btn.addEventListener('click', () => {
       body.classList.toggle('light-mode');
-
       if(body.classList.contains('light-mode')) {
         btn.textContent = 'Switch to Dark Mode';
       } else {
@@ -178,7 +206,8 @@
 
     const filterInput = document.getElementById('club-filter');
     const clubs = document.querySelectorAll('.club');
-//These are the functions//
+
+    //These are the functions//
     filterInput.addEventListener('input', () => {
       const filter = filterInput.value.toLowerCase();
       clubs.forEach(club => {
