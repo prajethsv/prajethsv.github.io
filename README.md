@@ -13,7 +13,7 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 ## Step 1: Launch the Cloud Server
 - Created an Ubuntu Server instance on AWS EC2.
-- Configured security groups to allow SSH and HTTP traffic.
+- Configured security groups to allow SSH, HTTP and HTTPS traffic.
 
 ## Step 2: Install Apache2 Web Server
 - Ran `sudo apt update` and `sudo apt install apache2`.
