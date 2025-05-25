@@ -3,7 +3,7 @@
 
 A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 server using GitHub Pages. This site helps Murdoch IT students explore degrees, clubs, and career resources.
 
-🔗 **Live Website:** [https://prajethsv.github.io](https://prajethsv.github.io)
+🔗 **Live Website:** https://www.murdochithub.me 
 
 ## Features
 - 🌑 Dark mode toggle (JavaScript)
