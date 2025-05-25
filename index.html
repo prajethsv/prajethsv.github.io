@@ -32,10 +32,15 @@
     }
 
     /* Light mode styles */
-    body.light-mode {
-      background: white;
-      color: black;
-    }
+  body.light-mode {
+  background: #f2f2f2; 
+  color: black;
+}
+    #blog-link {
+  color: #66bb6a; /* greenish for dark mode */
+  transition: color 0.5s;
+}
+
 
     /* Button style */
     #toggle-btn {
@@ -43,14 +48,14 @@
       padding: 10px 20px;
       cursor: pointer;
       font-size: 16px;
-      background-color: #fdd835; /* yellow accent */
+      background-color: #fdd835; 
       border: none;
       border-radius: 6px;
       color: #000;
       font-weight: bold;
     }
     body.light-mode #toggle-btn {
-      background-color: #c62828; /* deep red for light mode */
+      background-color: #c62828; /
       color: white;
     }
 
@@ -141,9 +146,8 @@
       color: #ffeb3b;
     }
 
-    /* Blog section link */
-    #blog a {
-      color: #b39ddb; /* light purple */
+    body.light-mode #blog a {
+   color: #2e7d32; /* a nice readable green */
     }
     #blog a:hover {
       color: #ce93d8;
@@ -167,9 +171,9 @@
     </ul>
   </section>
 
-  <section id="blog">
-    <h2><a href="blogs.html">Visit the Blog</a></h2>
-  </section>
+  
+<h2><a href="blogs.html" id="blog-link">Visit the Blog</a></h2>
+
 
   <!-- Club filter input -->
   <input type="text" id="club-filter" placeholder="Filter clubs by name or email">
