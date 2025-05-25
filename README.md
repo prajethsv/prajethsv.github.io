@@ -70,7 +70,7 @@ Value: murdochithub.me.
 TTL: Automatic
 ```
 
-## Step 5: Enable HTTPS with Certbot```bash
+## Step 5: Enable HTTPS with Certbot
 
 ```bash
 sudo apt install -y certbot python3-certbot-apache
