@@ -16,11 +16,19 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 ---
 
+
+
+
+
 ## Step 0: Register Your Custom Domain (Student Pack)
 1. Sign in to your Namecheap account—use the GitHub Student Developer Pack discount to register a `.me` domain for free.  
 2. Verify ownership via the Namecheap dashboard.
 
 ---
+
+
+
+
 
 ## Step 1: Launch the Cloud Server
 - In AWS Console → **EC2**, launch an **Ubuntu Server** instance.  
@@ -31,12 +39,20 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 ---
 
+
+
+
+
 ## Step 2: Install Apache2 Web Server
 ```bash
 sudo apt update
 sudo apt install -y apache2
 sudo systemctl enable --now apache2
 ```
+
+
+
+
 
 ## Step 3: Secure the Server with UFW Firewall
 - Enabled UFW and allowed OpenSSH and Apache.
@@ -48,6 +64,10 @@ sudo systemctl enable --now apache2
   sudo ufw status
   ```
 ![image](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
+
+
+
+
 
 ## Step 4: Deploy the Website from GitHub to Apache
 
@@ -70,12 +90,19 @@ Value: murdochithub.me.
 TTL: Automatic
 ```
 
+
+
+
+
 ## Step 5: Enable HTTPS with Certbot
 
 ```bash
 sudo apt install -y certbot python3-certbot-apache
 sudo certbot --apache -d murdochithub.me -d www.murdochithub.me
 ```
+
+
+
 
 
 
