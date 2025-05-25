@@ -3,254 +3,77 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Murdoch University Blogs - Future in Technology</title>
+  <title>Murdoch University Blogs</title>
   <style>
-    /* Reset some default styles */
-    * {
-      box-sizing: border-box;
-    }
-
     body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f9f9f9;
-      margin: 0;
+      font-family: Arial, sans-serif;
       line-height: 1.6;
-      color: #222;
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
+      margin: 20px;
+      background-color: #121212;
+      color: #e0e0e0;
     }
-
+    .container {
+      max-width: 900px;
+      margin: auto;
+      background: #1e1e1e;
+      padding: 20px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.8);
+      border-radius: 8px;
+    }
+    h1, h2 {
+      color: #4fc3f7;
+    }
+    .blog-post {
+      margin-bottom: 40px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 20px;
+    }
+    .date {
+      font-size: 0.9em;
+      color: #999;
+    }
+    .topics {
+      font-style: italic;
+      color: #bbb;
+      margin-bottom: 10px;
+    }
     a {
-      color: #004a99;
+      color: #81d4fa;
       text-decoration: none;
     }
     a:hover {
       text-decoration: underline;
     }
-
-    header, footer {
-      background-color: #003366;
-      color: #fff;
-      padding: 1rem 2rem;
-    }
-
-    header h1, footer p {
-      margin: 0;
-    }
-
-    nav {
-      margin-top: 0.5rem;
-    }
-
-    nav a {
-      margin-right: 1.5rem;
-      font-weight: 600;
-    }
-
-    main {
-      flex: 1 0 auto;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      background: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-
-    article {
-      margin-bottom: 3rem;
-      padding-bottom: 2rem;
-      border-bottom: 1px solid #ddd;
-    }
-
-    article:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    h2 {
-      color: #003366;
-      margin-bottom: 0.2rem;
-    }
-
-    h3 {
-      color: #0055cc;
-      margin-top: 1.5rem;
-    }
-
-    .meta {
-      font-size: 0.9rem;
-      color: #666;
-      margin-bottom: 1rem;
-    }
-
-    img.sideview {
-      float: right;
-      max-width: 250px;
-      margin-left: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    img.laptop {
-      float: right;
-      max-width: 250px;
-      margin-left: 1rem;
-      margin-bottom: 1rem;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-    }
-
-    p {
-      margin-bottom: 1rem;
-    }
-
-    ul {
-      margin-left: 1.5rem;
-      margin-bottom: 1rem;
-    }
-
-    /* Footer logos container */
-    .footer-logos {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      margin-top: 1rem;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .footer-logos img {
-      height: 40px;
-      filter: brightness(0) invert(1);
-    }
-
-    /* Responsive */
-    @media (max-width: 700px) {
-      img.sideview, img.laptop {
-        float: none;
-        display: block;
-        margin: 0 auto 1rem auto;
-        max-width: 100%;
-      }
-
-      nav a {
-        display: block;
-        margin-bottom: 0.5rem;
-      }
-
-      main {
-        margin: 1rem;
-        padding: 1rem;
-      }
-    }
   </style>
 </head>
 <body>
-  <header>
+  <div class="container">
     <h1>Murdoch University Blogs</h1>
-    <nav>
-      <a href="#">Home</a>
-      <a href="#">News</a>
-      <a href="#">Blogs</a>
-      <a href="#">Contact the Media team</a>
-      <a href="#">Library</a>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Part A Article -->
-    <article>
-      <h2>COVID-19: Skills for the future workplace</h2>
-      <div class="meta">
-        <span>Posted on Tuesday 4 August 2020</span> | 
-        <span>Topics: Campus Life, Information Technology</span> | 
-        <span>Ngala Kwop Biddi</span>
-      </div>
-
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=250&q=80" alt="Side view of woman using laptop" class="sideview" />
-
-      <p>Despite edging closer to a post-coronavirus world, there are still a lot of unknowns about the job market and the way it will function.</p>
-      <p>It’s safe to assume things won’t return to what we once knew, so what can you do to ensure employability in the workplace?</p>
-      <p>Workplaces across many industries have started to focus more on flexible working and working from home, meaning employers will be looking for employees with a slightly different skill set than normal. For graduate students, this is an opportunity to evaluate their skill set for areas of improvement to best position themselves for success on the job market in the ‘new normal’.</p>
-
-      <h3>Skills that will be in demand</h3>
-      <p>According to LinkedIn’s 2020 Grad’s Guide to Getting Hired, there are many skills in demand across all industries – mostly soft skills – for entry-level jobs and internship positions.</p>
-      <ul>
-        <li><strong>Adaptability:</strong> With change comes the need for adjustment, so the ability to adapt is crucial and an essential skill every employer will value. The focus will be on having an open mindset and constantly refining your skill set to embrace the evolving workplace through additional responsibilities, tasks, and pressure.</li>
-        <li><strong>Leadership:</strong> In uncertain times, leadership will be a highly sought-after commodity. Professionals who can inspire, empower, and maximise the output of a team through clarity and confidence amid fluctuating circumstances will be in high demand.</li>
-        <li><strong>Communication:</strong> Every good leader excels in communication, which will be even more important as the number of employees working remotely increases. Practice your delivery, posture, facial expressions, and maintaining eye-contact through a screen to clearly and professionally convey a message. Those are the key factors of this core competency that will matter the most in a largely digital workspace.</li>
-        <li><strong>Problem-solving:</strong> Well-developed problem-solving skills like active listening, critical thinking, and analysis will help drive decision-making and managing your tasks and responsibilities.</li>
-      </ul>
-
-      <h3>A focus on technology</h3>
-      <p>Besides soft skills, developing tech-savvy skills is equally important. The pandemic has turned digital skills into bare necessities, so mastering a variety of tools from communication platforms to management solutions will be important to keep up to date with working digitally.</p>
-      <p>With automation becoming more involved in everyday business operations, people who understand technology become more valuable. For instance, research shows 61 per cent of enterprises believe AI will substantially transform their industries, adding an additional level of efficiency to the human workforce.</p>
-      <p>Consider getting familiar with data literacy, coding, digital marketing, and technology like cloud and blockchain. Decent working knowledge of some of these digital skills and technologies will propel you above the rest.</p>
-
-      <h3>Building skills from the comfort of your home</h3>
-      <p>From virtual internships to short-term credential programs to skill-specific online courses like Coursera, edX, Udemy, Skillshare, and others, graduates can choose from multiple paths to develop or polish and, ultimately, leverage a variety of skills across various disciplines needed for success in a fast-changing workplace.</p>
-      <p>You can work out your areas of improvement by completing a SWOT analysis, a technique for assessing four key aspects of a person or organisation: strengths, weaknesses, opportunities, and threats.</p>
-      <p>To boost your chances of employment, include your end-of-year university project on your resume and highlight specific skills and knowledge from your studies that can be highlighted as transferrable skills in the workplace. Use it to your advantage to communicate ideas and values relevant to almost every job that involves understanding and working with people.</p>
-      <p>Graduate students seeking to ace interviews and stand out would do well to follow their footsteps and adapt. Right now, it has never been more important to differentiate yourself and communicate your value proposition to potential employers at first glance.</p>
-
-      <p>Read about the <a href="#">impact of AI on applying for your first job</a>. Or learn more about how you could <a href="#">study at Murdoch as an international student</a>.</p>
-    </article>
-
-    <!-- Part B Article -->
-    <article>
-      <h2>Why now is the time to shift focus on remote learning</h2>
-      <div class="meta">
-        <span>Posted on Wednesday 6 May 2020</span> | 
-        <span>Topics: Campus Life</span> | 
-        <span>Ngala Kwop Biddi</span>
-      </div>
-
-      <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=250&q=80" alt="Laptop and notebook overlay" class="laptop" />
-
-      <p>COVID-19 has disrupted virtually every realm of society, and education is no exception.</p>
-      <p>According to Education Week, school closures due to coronavirus have impacted at least 124,000 public and private schools in the US, affecting at least 55.1 million students. As of 10 April, UNESCO’s data shows there are 1,576,021,818 affected learners globally with 188 country-wide closures.</p>
-      <p>Due to the pandemic, educational institutions have suddenly found themselves reaching for technology to ensure continuity of learning while students are at home.</p>
-      <p>Murdoch University has also embraced this change, expanding its online offerings and investing in the technology to support online learning.</p>
-
-      <h3>Remote learning during COVID-19</h3>
-      <p>Remote learning is an educational approach where teachers deliver instruction to students who are not physically present in a traditional classroom.</p>
-      <p>This format relies heavily on technology — including computers, mobile devices, and internet connectivity — and learning management systems to create a dynamic and interactive educational experience.</p>
-
-      <h3>Benefits of remote learning</h3>
-      <ul>
-        <li><strong>Flexibility:</strong> Students can attend classes from anywhere, accommodating diverse schedules and lifestyles.</li>
-        <li><strong>Accessibility:</strong> Online resources and recorded lectures help students review content at their own pace.</li>
-        <li><strong>Cost-effective:</strong> Reduces travel and accommodation costs, making education more affordable.</li>
-        <li><strong>Personalised learning:</strong> Allows for tailored educational experiences through adaptive learning technologies.</li>
-      </ul>
-
-      <h3>Challenges to overcome</h3>
-      <p>While remote learning offers many advantages, it also presents several challenges:</p>
-      <ul>
-        <li><strong>Technology gap:</strong> Not all students have reliable access to devices and internet.</li>
-        <li><strong>Engagement:</strong> Maintaining student motivation and participation can be difficult.</li>
-        <li><strong>Assessment integrity:</strong> Ensuring fair evaluation in an online environment.</li>
-      </ul>
-
-      <h3>Murdoch’s response and future directions</h3>
-      <p>Murdoch University has launched new initiatives to enhance online teaching and learning quality, including faculty training and investment in interactive platforms.</p>
-      <p>The university aims to integrate blended learning models post-pandemic, combining face-to-face and online education for a more flexible and inclusive experience.</p>
-
-      <p>Discover more about <a href="#">Murdoch’s online courses and programs</a> and how they’re shaping the future of education.</p>
-    </article>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Murdoch University. All rights reserved.</p>
-    <div class="footer-logos" aria-label="University and partners logos">
-      <img src="https://www.murdoch.edu.au/__data/assets/image/0011/188805/murdoch-logo.svg" alt="Murdoch University logo" />
-      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/42/Australian_Government_Coat_of_Arms.svg/1200px-Australian_Government_Coat_of_Arms.svg.png" alt="Australian Government logo" />
-      <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/TAFE_Queensland_Logo.svg/1200px-TAFE_Queensland_Logo.svg.png" alt="TAFE Queensland logo" />
+    <div class="blog-post">
+      <h2>COVID-19: Skills for the Future Workplace</h2>
+      <p class="date">Posted on Tuesday 4 August 2020</p>
+      <p class="topics">Topics: Campus Life, Information Technology</p>
+      <p>
+        The job market is changing post-pandemic, with increased demand for <strong>soft skills</strong> like adaptability, leadership, communication, and problem-solving. In addition to these, <strong>technology skills</strong> such as coding, data literacy, and knowledge of cloud and blockchain are becoming essential. Virtual internships and online learning platforms such as <a href="https://www.coursera.org" target="_blank" rel="noopener">Coursera</a>, <a href="https://www.edx.org" target="_blank" rel="noopener">edX</a>, and <a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a> can help graduates build these skills from home.
+      </p>
+      <p>
+        Graduates should showcase transferable skills through projects and tailor their resumes to highlight relevant knowledge for the evolving workplace.
+      </p>
     </div>
-  </footer>
+
+    <div class="blog-post">
+      <h2>Why Now is the Time to Shift Focus on Remote Learning</h2>
+      <p class="date">Posted on Wednesday 6 May 2020</p>
+      <p class="topics">Topics: Campus Life</p>
+      <p>
+        The pandemic forced schools and universities to shift quickly to <strong>online learning</strong>, using tools like Google Classroom, Zoom, and MOOC platforms. While this digital shift has challenges such as maintaining student attention and delivering practical lessons, it also presents an opportunity for long-term innovation.
+      </p>
+      <p>
+        Hybrid learning models combining in-person and online education may become the new norm, offering more affordable and flexible options for students worldwide.
+      </p>
+    </div>
+
+  </div>
 </body>
 </html>
