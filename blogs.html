@@ -3,43 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Murdoch University Blogs</title>
+  <title>Murdoch IT Hub – Blog</title>
   <style>
     body {
+      margin: 0; padding: 0;
+      background: #000;
+      color: #eee;
       font-family: Arial, sans-serif;
       line-height: 1.6;
-      margin: 20px;
-      background-color: #121212;
-      color: #e0e0e0;
     }
     .container {
-      max-width: 900px;
-      margin: auto;
-      background: #1e1e1e;
-      padding: 20px;
-      box-shadow: 0 0 12px rgba(0,0,0,0.8);
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1.5rem;
+      background: #111;
       border-radius: 8px;
     }
-    h1, h2 {
-      color: #4fc3f7;
+    h1 {
+      color: #d32f2f; /* red accent */
+      margin-bottom: 0.5rem;
     }
-    .blog-post {
-      margin-bottom: 40px;
+    .all-posts {
+      display: inline-block;
+      margin-bottom: 1.5rem;
+      color: #fdd835; /* yellow */
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .all-posts:hover {
+      text-decoration: underline;
+    }
+    article {
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
       border-bottom: 1px solid #333;
-      padding-bottom: 20px;
     }
-    .date {
-      font-size: 0.9em;
-      color: #999;
+    article:last-child {
+      border-bottom: none;
     }
-    .topics {
-      font-style: italic;
-      color: #bbb;
-      margin-bottom: 10px;
+    h2 {
+      margin: 0 0 0.5rem;
+      font-size: 1.4rem;
+    }
+    h2 a {
+      color: #fdd835; /* yellow links */
+      text-decoration: none;
+    }
+    h2 a:hover {
+      text-decoration: underline;
+    }
+    .meta {
+      font-size: 0.9rem;
+      color: #888;
+      margin-bottom: 0.75rem;
+    }
+    ul {
+      margin-left: 1.2rem;
+      margin-bottom: 1rem;
+    }
+    ul li {
+      margin-bottom: 0.5rem;
     }
     a {
-      color: #81d4fa;
-      text-decoration: none;
+      color: #fdd835;
     }
     a:hover {
       text-decoration: underline;
@@ -48,31 +74,58 @@
 </head>
 <body>
   <div class="container">
-    <h1>Murdoch University Blogs</h1>
+    <h1>Murdoch IT Hub – Blog</h1>
+    <a href="https://www.murdoch.edu.au/news/blogs/future-in-technology" class="all-posts" target="_blank">
+      ▶ View all “Future in Technology” posts
+    </a>
 
-    <div class="blog-post">
-      <h2>COVID-19: Skills for the Future Workplace</h2>
-      <p class="date">Posted on Tuesday 4 August 2020</p>
-      <p class="topics">Topics: Campus Life, Information Technology</p>
-      <p>
-        The job market is changing post-pandemic, with increased demand for <strong>soft skills</strong> like adaptability, leadership, communication, and problem-solving. In addition to these, <strong>technology skills</strong> such as coding, data literacy, and knowledge of cloud and blockchain are becoming essential. Virtual internships and online learning platforms such as <a href="https://www.coursera.org" target="_blank" rel="noopener">Coursera</a>, <a href="https://www.edx.org" target="_blank" rel="noopener">edX</a>, and <a href="https://www.udemy.com" target="_blank" rel="noopener">Udemy</a> can help graduates build these skills from home.
+    <!-- Article 1 -->
+    <article>
+      <h2>
+        <a href="https://www.murdoch.edu.au/news/blogs/blog-posts/future-in-technology/westpac-young-technologists-scholarships-now-open"
+           target="_blank">
+          Westpac Young Technologists Scholarships now open
+        </a>
+      </h2>
+      <p class="meta">
+        Posted on Wednesday 27 November 2024 | Topics: Business, Information Technology | Ngala Kwop Biddi
       </p>
       <p>
-        Graduates should showcase transferable skills through projects and tailor their resumes to highlight relevant knowledge for the evolving workplace.
+        Students planning to study technology-related courses at Murdoch in 2025 can apply for a $20,000 Westpac Young Technologists Scholarship, including a Singapore residential program and lifelong W100 network membership. Applications open 2 Sep and close 13 Jan 2025.
       </p>
-    </div>
+    </article>
 
-    <div class="blog-post">
-      <h2>Why Now is the Time to Shift Focus on Remote Learning</h2>
-      <p class="date">Posted on Wednesday 6 May 2020</p>
-      <p class="topics">Topics: Campus Life</p>
-      <p>
-        The pandemic forced schools and universities to shift quickly to <strong>online learning</strong>, using tools like Google Classroom, Zoom, and MOOC platforms. While this digital shift has challenges such as maintaining student attention and delivering practical lessons, it also presents an opportunity for long-term innovation.
+    <!-- Article 2 -->
+    <article>
+      <h2>
+        <a href="https://www.murdoch.edu.au/news/blogs/blog-posts/future-in-technology/what-kind-of-job-can-you-get-with-a-degree-in-technology"
+           target="_blank">
+          What kind of job can you get with a degree in information technology?
+        </a>
+      </h2>
+      <p class="meta">
+        Posted on Friday 11 March 2022 | Topics: Campus Life | Ngala Kwop Biddi
       </p>
       <p>
-        Hybrid learning models combining in-person and online education may become the new norm, offering more affordable and flexible options for students worldwide.
+        From games designer and cyber security analyst to software developer and network administrator, an IT degree at Murdoch opens doors to high-demand roles shaping the digital age. Discover your pathway today.
       </p>
-    </div>
+    </article>
+
+    <!-- Article 3 -->
+    <article>
+      <h2>
+        <a href="https://www.murdoch.edu.au/news/blogs/blog-posts/future-in-technology/have-you-thought-about-these-eight-careers-in-gaming"
+           target="_blank">
+          Have you thought about these eight careers in gaming?
+        </a>
+      </h2>
+      <p class="meta">
+        Posted on Friday 21 August 2020 | Topics: Campus Life, Creative Arts & Communication, IT | Ngala Kwop Biddi
+      </p>
+      <p>
+        Explore eight booming roles in the multi-billion dollar gaming industry—from game designer and audio engineer to professional gamer and translator. Turn passion into profession with Murdoch’s specialist courses.
+      </p>
+    </article>
 
   </div>
 </body>
