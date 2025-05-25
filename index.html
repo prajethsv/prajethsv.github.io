@@ -159,7 +159,8 @@
   </div>
 
   <script>
-    // Dark mode toggle
+
+    //This is the dark mode toggle///
     const btn = document.getElementById('toggle-btn');
     const body = document.body;
 
@@ -173,10 +174,9 @@
       }
     });
 
-    // Club filter functionality
     const filterInput = document.getElementById('club-filter');
     const clubs = document.querySelectorAll('.club');
-
+//These are the functions//
     filterInput.addEventListener('input', () => {
       const filter = filterInput.value.toLowerCase();
       clubs.forEach(club => {
