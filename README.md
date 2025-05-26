@@ -34,7 +34,7 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 - In AWS Console → **EC2**, launch an **Ubuntu Server** instance.
 - Use this command to access your ubuntu instance 
  ```bash
-  ssh -i /path/to/your-key.pem ubuntu@your-public-ip
+  ssh -i XXXXXX.pem ubuntu@XXXXXXXX
 ```
 
 - Configure its **Security Group** to allow:
