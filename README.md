@@ -116,7 +116,7 @@ git clone https://github.com/prajethsv/prajethsv.github.io.git
 sudo rsync -av --delete ~/prajethsv.github.io/ /var/www/html/
 sudo systemctl reload apache2
 ```
-- On every update, simply:
+- EVerytime you edit something on your html in github, to update, simply:
 ```bash
 cd ~/prajethsv.github.io
 git pull origin main
