@@ -31,7 +31,12 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 
 ## Step 1: Launch the Cloud Server
-- In AWS Console → **EC2**, launch an **Ubuntu Server** instance.  
+- In AWS Console → **EC2**, launch an **Ubuntu Server** instance.
+- Use this command to access your ubuntu instance 
+ ```bash
+  ssh -i /path/to/your-key.pem ubuntu@your-public-ip
+```
+
 - Configure its **Security Group** to allow:
   - **SSH** (port 22)  
   - **HTTP** (port 80)  
