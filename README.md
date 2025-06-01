@@ -22,6 +22,7 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 An active AWS account. If you don’t have one, go to aws.amazon.com and sign up for free.
 
 A valid payment method (AWS offers a free tier which is enough for this project).
+
 https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all
 
 ![image](https://github.com/user-attachments/assets/daff6d14-bb94-4e3e-ade6-ff3f93736dee)
