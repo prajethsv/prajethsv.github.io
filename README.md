@@ -39,8 +39,9 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
  
 
 ## Step 1: Register Your Custom Domain (Student Pack)
-1. Sign in to your Namecheap account—use the GitHub Student Developer Pack discount to register a `.me` domain for free.  
-2. Verify ownership via the Namecheap dashboard.
+1. Sign in to your Namecheap account
+2. —use the GitHub Student Developer Pack discount to register a `.me` domain for free.  
+3. Verify ownership via the Namecheap dashboard.
 
 ---
 
