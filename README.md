@@ -21,17 +21,12 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 ![image](https://github.com/user-attachments/assets/0a46fe3f-c23f-4b29-9a1c-5c91453946bc)
 
 ## Step 0: Creating an Ubuntu Instance in AWS
-Go to AWS Console
-
-Navigate to EC2 → Launch Instance
-
-Select Ubuntu Server 22.04 LTS (Free tier eligible)
-
-Choose a t2.micro instance (free tier)
-
-Under Key pair (login):
-
-Create or choose a .pem file (e.g. aws-key.pem)
+-Go to AWS Console
+-Navigate to EC2 → Launch Instance
+-Select Ubuntu Server 22.04 LTS (Free tier eligible)
+-Choose a t2.micro instance (free tier)
+-Under Key pair (login):
+-Create or choose a .pem file (e.g. aws-key.pem)
 
 - Configure its **Security Group** to allow:
   - **SSH** (port 22)  
