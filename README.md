@@ -17,10 +17,13 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 ---
 
 
+## Step 0: Creating an Ubuntu Instance in AWS
+
+![image](https://github.com/user-attachments/assets/0a46fe3f-c23f-4b29-9a1c-5c91453946bc)
 
 
 
-## Step 0: Register Your Custom Domain (Student Pack)
+## Step 1: Register Your Custom Domain (Student Pack)
 1. Sign in to your Namecheap account—use the GitHub Student Developer Pack discount to register a `.me` domain for free.  
 2. Verify ownership via the Namecheap dashboard.
 
@@ -30,7 +33,7 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 
 
-## Step 1: Launch the Cloud Server
+## Step 2: Launch the Cloud Server
 - In AWS Console → **EC2**, launch an **Ubuntu Server** instance.
 - Use this command to access your ubuntu instance 
  ```bash
@@ -48,7 +51,7 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 
 
-## Step 2: Install Apache2 Web Server
+## Step 3: Install Apache2 Web Server
 ```bash
 sudo apt update
 sudo apt install -y apache2
@@ -59,7 +62,7 @@ sudo systemctl enable --now apache2
 
 
 
-## Step 3: Secure the Server with UFW Firewall
+## Step 4: Secure the Server with UFW Firewall
 - Enabled UFW and allowed OpenSSH and Apache.
 - Commands used:
   ```bash
@@ -74,7 +77,7 @@ sudo systemctl enable --now apache2
 
 
 
-## Step 4: Deploy the Website from GitHub to Apache
+## Step 5: Deploy the Website from GitHub to Apache
 
 - In Namecheap → Domain List → Manage → Advanced DNS.
 - Under Host Records, add an A record:
@@ -99,7 +102,7 @@ TTL: Automatic
 
 
 
-## Step 5: Enable HTTPS with Certbot
+## Step 6: Enable HTTPS with Certbot
 
 ```bash
 sudo apt install -y certbot python3-certbot-apache
@@ -111,7 +114,7 @@ sudo certbot --apache -d murdochithub.me -d www.murdochithub.me
 
 
 
-## Step 6: Deploy the Website from GitHub
+## Step 7: Deploy the Website from GitHub
 
 - SSH into your EC2 instance:
 - Clone your repo and copy files to Apache’s document root:
@@ -121,7 +124,7 @@ git clone https://github.com/prajethsv/prajethsv.github.io.git
 sudo rsync -av --delete ~/prajethsv.github.io/ /var/www/html/
 sudo systemctl reload apache2
 ```
-- EVerytime you edit something on your html in github, to update, simply:
+- Everytime you edit something on your html in github, to update, simply:
 ```bash
 cd ~/prajethsv.github.io
 git pull origin main
