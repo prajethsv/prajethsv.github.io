@@ -33,6 +33,12 @@ Under Key pair (login):
 
 Create or choose a .pem file (e.g. aws-key.pem)
 
+- Configure its **Security Group** to allow:
+  - **SSH** (port 22)  
+  - **HTTP** (port 80)  
+  - **HTTPS** (port 443)
+ 
+ 
 
 ## Step 1: Register Your Custom Domain (Student Pack)
 1. Sign in to your Namecheap account—use the GitHub Student Developer Pack discount to register a `.me` domain for free.  
@@ -51,12 +57,7 @@ Create or choose a .pem file (e.g. aws-key.pem)
   ssh -i XXXXXX.pem ubuntu@XXXXXXXX
 ```
 
-- Configure its **Security Group** to allow:
-  - **SSH** (port 22)  
-  - **HTTP** (port 80)  
-  - **HTTPS** (port 443)  
-
----
+ 
 
 
 
