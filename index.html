@@ -14,15 +14,16 @@
       opacity: 0;
       animation: fadeIn 1s ease forwards;
     }
-   h1 {
-  animation: typing 2s steps(10, end), blink 0.7s step-end infinite;
+h1 {
   white-space: nowrap;
   overflow: hidden;
-  width: 0;
   border-right: 3px solid white;
   margin-bottom: 10px;
   color: #d32f2f;
+  width: fit-content;
+  animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;
 }
+
 
 @keyframes typing {
   from { width: 0 }
@@ -53,9 +54,9 @@
     
 
     /* Light mode styles */
-  body.light-mode {
+body.light-mode {
   background: #f2f2f2; 
-  color: black;
+  color: #121212;
 }
 #blog-link {
   color: #66bb6a;
@@ -158,14 +159,14 @@
   box-shadow: 0 4px 10px rgba(0,0,0,0.4);
 }
 
+body.light-mode .club a {
+  color: #2e7d32; /* readable green or any you like */
+}
+
 body.light-mode .club a:hover {
   background: #bbb;
+  color: #000;
 }
-
-body.light-mode .club:hover {
-  background: #ccc;
-}
-
     /* Degrees section */
     #degrees {
       margin: 40px auto;
