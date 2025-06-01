@@ -15,12 +15,13 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 - 🔒 HTTPS via Let’s Encrypt  
 
 ---
+## 🔓 Step 0: Loggining into AWS
 
 
 
 ![image](https://github.com/user-attachments/assets/0a46fe3f-c23f-4b29-9a1c-5c91453946bc)
 
-## 🪜 Step 0: Creating an Ubuntu Instance in AWS
+## 🪜 Step 1: Creating an Ubuntu Instance in AWS
 -Go to AWS Console
 
 -Navigate to EC2 → Launch Instance
@@ -38,7 +39,7 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
  
  
 
-## 🔑 Step 1: Register a Free .me Domain (Student Pack)
+## 🔑 Step 2: Register a Free .me Domain (Student Pack)
 1. Sign in to your Namecheap account
 2. Use the GitHub Student Developer Pack discount to register a `.me` domain for free.  
 3. Verify ownership via the Namecheap dashboard.
@@ -50,7 +51,7 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 
 
-## 🔌 Step 2: SSH into Your Server
+## 🔌 Step 3: SSH into Your Server
 - In AWS Console → **EC2**, launch an **Ubuntu Server** instance.
 - Use this command to access your ubuntu instance 
  ```bash
@@ -63,7 +64,7 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 
 
-## 🌐 Step 3: Install Apache2 Web Server
+## 🌐 Step 4: Install Apache2 Web Server
 ```bash
 sudo apt update
 sudo apt install -y apache2
@@ -74,7 +75,7 @@ sudo systemctl enable --now apache2
 
 
 
-## 🔐 Step 4: Enable UFW Firewall
+## 🔐 Step 5: Enable UFW Firewall
 - Enabled UFW and allowed OpenSSH and Apache.
 - Commands used:
   ```bash
@@ -89,7 +90,7 @@ sudo systemctl enable --now apache2
 
 
 
-## 🌍 Step 5: Point Domain to EC2 (DNS Setup)
+## 🌍 Step 6: Point Domain to EC2 (DNS Setup)
 
 - In Namecheap → Domain List → Manage → Advanced DNS.
 - Under Host Records, add an A record:
@@ -114,7 +115,7 @@ TTL: Automatic
 
 
 
-## 🔒 Step 6: Enable HTTPS via Let’s Encrypt
+## 🔒 Step 7: Enable HTTPS via Let’s Encrypt
 
 ```bash
 sudo apt install -y certbot python3-certbot-apache
@@ -126,7 +127,7 @@ sudo certbot --apache -d murdochithub.me -d www.murdochithub.me
 
 
 
-## 📁 Step 7: Deploy Website from GitHub
+## 📁 Step 8: Deploy Website from GitHub
 
 - SSH into your EC2 instance:
 - Clone your repo and copy files to Apache’s document root:
