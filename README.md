@@ -16,6 +16,15 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 ---
 ## 🔓 Step 0: Loggining into AWS
+- Before you can create and manage your cloud server, you need to log into your AWS account.
+
+## What you need:
+An active AWS account. If you don’t have one, go to aws.amazon.com and sign up for free.
+
+A valid payment method (AWS offers a free tier which is enough for this project).
+https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all
+
+![image](https://github.com/user-attachments/assets/daff6d14-bb94-4e3e-ade6-ff3f93736dee)
 
 
 
@@ -44,7 +53,8 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 2. Use the GitHub Student Developer Pack discount to register a `.me` domain for free.  
 3. Verify ownership via the Namecheap dashboard.
 4. This process takes 3-4 days for them to verify
-
+   
+https://www.namecheap.com/myaccount/login/
 ---
 
 
@@ -66,9 +76,9 @@ A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 serv
 
 ## 🌐 Step 4: Install Apache2 Web Server
 ```bash
-sudo apt update
-sudo apt install -y apache2
-sudo systemctl enable --now apache2
+sudo apt update  # Updates the package list to get latest versions
+sudo apt install -y apache2  # Installs Apache web server
+sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
 ```
 
 
