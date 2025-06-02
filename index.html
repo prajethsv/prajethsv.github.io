@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Murdoch IT Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
@@ -24,12 +26,6 @@ h1 {
   animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;
 }
 
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
 @keyframes blink {
   50% { border-color: transparent; }
 }
@@ -50,27 +46,7 @@ h1 {
     }
 @keyframes fadeIn {
   to { opacity: 1; }
-}
-  .corner-widget {
-      position: fixed;
-      bottom: 20px; 
-      right: 20px; 
-      width: 200px;
-      padding: 10px;
-      background-color: #f0f0f0;
-      border: 2px solid #333;
-      border-radius: 8px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      font-family: Arial, sans-serif;
-      z-index: 1000;
-      text-align: center;
-      color: #222;
-    }
 
-       #idea-display {
-      margin-top: 10px;
-      font-weight: bold;
-    }
 
     /* Light mode styles */
 body.light-mode {
@@ -305,63 +281,57 @@ body.light-mode #degrees a {
     const btn = document.getElementById('toggle-btn');
     const body = document.body;
 
-    btn.addEventListener('click', () => {
-      body.classList.toggle('light-mode');
-      if(body.classList.contains('light-mode')) {
-        btn.textContent = 'Switch to Dark Mode';
+
+  btn.addEventListener('click', () => {
+    body.classList.toggle('light-mode');
+    if (body.classList.contains('light-mode')) {
+      btn.textContent = 'Switch to Dark Mode';
+    } else {
+      btn.textContent = 'Switch to Light Mode';
+    }
+  });
+
+  // Club filter functionality
+  const filterInput = document.getElementById('club-filter');
+  const clubs = document.querySelectorAll('.club');
+
+  filterInput.addEventListener('input', () => {
+    const filter = filterInput.value.toLowerCase();
+    clubs.forEach(club => {
+      const name = club.querySelector('h3').textContent.toLowerCase();
+      const email = club.querySelector('p a').textContent.toLowerCase();
+      if (name.includes(filter) || email.includes(filter)) {
+        club.style.display = '';
       } else {
-        btn.textContent = 'Switch to Light Mode';
+        club.style.display = 'none';
       }
     });
+  });
 
-    const filterInput = document.getElementById('club-filter');
-    const clubs = document.querySelectorAll('.club');
+  // Project ideas generator
+  const ideas = [
+    "Build a To-Do app using Flask",
+    "Create a static blog site with Hugo",
+    "Scrape a job board using Python + BeautifulSoup",
+    "Make a personal portfolio site",
+    "Develop a chatbot using Python and NLP",
+    "Create a weather app using React",
+    "Build a note-taking app with local storage",
+    "Make a quiz app with JavaScript"
+  ];
 
-    //These are the functions//
-    filterInput.addEventListener('input', () => {
-      const filter = filterInput.value.toLowerCase();
-      clubs.forEach(club => {
-        const name = club.querySelector('h3').textContent.toLowerCase();
-        const email = club.querySelector('p a').textContent.toLowerCase();
-        if(name.includes(filter) || email.includes(filter)) {
-          club.style.display = '';
-        } else {
-          club.style.display = 'none';
-        }<script>
-const ideas = [
-  "Build a To-Do app using Flask",
-  "Create a static blog site with Hugo",
-  "Scrape a job board using Python + BeautifulSoup",
-  "Make a personal portfolio site",
-  "Develop a chatbot using Python and NLP",
-  "Create a weather app using React",
-  "Build a note-taking app with local storage",
-  "Make a quiz app with JavaScript"
+  const ideaBtn = document.getElementById('get-idea-btn');
+  const ideaDisplay = document.getElementById('idea-display');
+
+  ideaBtn.addEventListener('click', () => {
+    const randomIndex = Math.floor(Math.random() * ideas.length);
+    ideaDisplay.textContent = ideas[randomIndex];
+    // Random color for idea text
+    ideaDisplay.style.color = '#' + Math.floor(Math.random() * 16777215).toString(16);
+  });
+</script>
 ];
 
-const btn = document.getElementById('get-idea-btn');
-const display = document.getElementById('idea-display');
-
-    // Project Ideas Generator
-    const ideas = [
-      "Build a To-Do app using Flask",
-      "Create a static blog site with Hugo",
-      "Scrape a job board using Python + BeautifulSoup",
-      "Make a personal portfolio site",
-      "Develop a chatbot using Python and NLP",
-      "Create a weather app using React",
-      "Build a note-taking app with local storage",
-      "Make a quiz app with JavaScript"
-    ];
-
-    const ideaBtn = document.getElementById('get-idea-btn');
-    const ideaDisplay = document.getElementById('idea-display');
-
-    ideaBtn.addEventListener('click', () => {
-      const randomIndex = Math.floor(Math.random() * ideas.length);
-      ideaDisplay.textContent = ideas[randomIndex];
-      ideaDisplay.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
-    }
       });
     });
   </script>
