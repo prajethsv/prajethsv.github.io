@@ -198,10 +198,6 @@ Video Explainer
 - HTTPS activation using Certbot
 
 
-https://github.com/user-attachments/assets/bc5cd146-db25-4052-b2be-2da266bb07ea
-
-
-
 Security Precautions
 
 -Never share your .pem key publicly.
