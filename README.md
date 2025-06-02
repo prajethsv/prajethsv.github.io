@@ -1,9 +1,22 @@
 # ICT171 Assignment 2 – Cloud Server Setup  
 # Murdoch IT Hub  
 
-A creative web project for ICT171 Assignment 2, hosted on an AWS Ubuntu EC2 server using GitHub Pages. This site helps Murdoch IT students explore degrees, clubs, and career resources.
+About This Project
+Murdoch IT Hub is a static educational website hosted on an AWS EC2 Ubuntu server. It was built for ICT171 Assignment 2 to help Murdoch University IT students explore degrees, student clubs, and career opportunities. The site is manually configured using Apache2, GitHub, and a free .me domain from the GitHub Student Developer Pack.
 
-🔗 **Live Website:** https://www.murdochithub.me  
+Global IP: 52.62.110.76
+
+SNS Entry: www.murdochithub.me
+
+GitHub Repo: https://github.com/prajethsv/prajethsv.github.io
+
+
+Pre-Requisites Summary
+
+-AWS account with Free Tier eligibility
+-GitHub account for repo hosting
+-Namecheap account (GitHub Student Pack)
+-Basic knowledge of SSH and Linux commands
 
 ---
 
@@ -81,6 +94,7 @@ sudo apt update  # Updates the package list to get latest versions
 sudo apt install -y apache2  # Installs Apache web server
 sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
 ```
+- If Apache doesn't start: `sudo systemctl restart apache2`
 
 
 
@@ -95,6 +109,8 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
   sudo ufw enable
   sudo ufw status
   ```
+  - Check firewall with: `sudo ufw status`
+
 ![image](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
 
 
@@ -141,7 +157,8 @@ sudo apt install certbot python3-certbot-apache -y
 ```
 sudo certbot --apache
 ```
-
+- If website doesn’t show: Check permissions or verify files exist in `/var/www/html`
+- If HTTPS setup fails: Re-run `sudo certbot --apache` or check DNS propagation
 
 
 
@@ -166,11 +183,30 @@ sudo rsync -av --delete ~/prajethsv.github.io/ /var/www/html/
 sudo systemctl reload apache2
 ```
 
+- Accessed the live site from multiple devices and browsers (Chrome, Firefox, Mobile)
+- Verified HTTPS was working (padlock icon appears in browser)
+- Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
+- Verified correct file structure at `/var/www/html/` on the server
+
+
+Video Explainer
+: A full walkthrough of all setup steps is available in the accompanying explainer video, demonstrating:
+- AWS EC2 setup and SSH login
+- Apache installation and firewall setup
+- GitHub repo cloning and deployment
+- Domain and DNS configuration
+- HTTPS activation using Certbot
+
+
+https://github.com/user-attachments/assets/bc5cd146-db25-4052-b2be-2da266bb07ea
 
 
 
+Security Precautions
 
-
-
+-Never share your .pem key publicly.
+-Use chmod 400 aws-key.pem to restrict key permissions.
+-Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
+-Consider setting up fail2ban or changing SSH port for extra security (optional advanced).
 
 
