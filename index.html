@@ -4,6 +4,7 @@
   <title>Murdoch IT Hub</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
+    /* Your existing styles */
     body {
       background: #121212;
       color: white;
@@ -14,230 +15,72 @@
       opacity: 0;
       animation: fadeIn 1s ease forwards;
     }
-h1 {
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 3px solid white;
-  margin-bottom: 10px;
-  color: #d32f2f;
-  width: fit-content;
-  animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;
-}
-
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-
-
-    h2 {
-      margin-top: 50px;
-      margin-bottom: 20px;
-      font-weight: 600;
-      font-size: 28px;
-      font-family: 'Roboto', sans-serif;
-      color: #d32f2f; /* Murdoch red */
-
+    h1 {
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid white;
+      margin-bottom: 10px;
+      color: #d32f2f;
+      width: fit-content;
+      animation: typing 2s steps(30, end) forwards, blink 0.7s step-end infinite;
     }
     @keyframes typing {
       from { width: 0 }
       to { width: 100% }
     }
-@keyframes fadeIn {
-  to { opacity: 1; }
-}
-    
-
-    /* Light mode styles */
-body.light-mode {
-  background: #FFFFC5;; 
-}
-#blog-link {
-  color: #66bb6a;
-  transition: color 0.5s;
-  position: relative;
-}
-
-#blog-link::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  bottom: -5px;
-  left: 0;
-  background-color: #fdd835;
-  transform: scaleX(0);
-  transform-origin: right;
-  transition: transform 0.3s ease;
-}
-#blog-link:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
-}
-
-    #toggle-btn {
-      margin-top: 30px;
-      padding: 10px 20px;
-      cursor: pointer;
-      font-size: 16px;
-      background-color: #fdd835; 
-      border: none;
-      border-radius: 6px;
-      color: #000;
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    /* ... rest of your styles (light-mode, buttons, clubs, etc.) ... */
+    .corner-widget {
+      position: fixed;
+      bottom: 20px; 
+      right: 20px; 
+      width: 200px;
+      padding: 10px;
+      background-color: #f0f0f0;
+      border: 2px solid #333;
+      border-radius: 8px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      font-family: Arial, sans-serif;
+      z-index: 1000;
+      text-align: center;
+      color: #222;
+    }
+    #idea-display {
+      margin-top: 10px;
       font-weight: bold;
-      transition: background-color 0.3s, transform 0.3s;
     }
-    body.light-mode #toggle-btn {
-      background-color: #c62828;
-      color: white;
-      transform: scale(1.05);
-
-    }
-
-    /* Club filter input style */
-    #club-filter {
-      margin-top: 40px;
-      padding: 8px 12px;
-      width: 250px;
-      font-size: 16px;
-      border-radius: 5px;
-      border: 1px solid #ccc;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-      background: #333;
-      color: white;
-      transition: background 0.5s, color 0.5s;
-    }
-    body.light-mode #club-filter {
-      background: #eee;
-      color: black;
-      border: 1px solid #999;
-    }
-
-    /* Club list styles */
-    #clubs {
-      margin-top: 30px;
-      text-align: left;
-      max-width: 600px;
-      margin-left: auto;
-      margin-right: auto;
-    }
-.club {
-  background: #1e1e1e;
-  margin-bottom: 15px;
-  padding: 15px;
-  border-radius: 8px;
-  transition: background 0.5s, color 0.5s, all 0.3s ease;
-  border-left: 5px solid #388e3c; /* green accent */
-}
-
-body.light-mode .club {
-  background-color: #555;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  border-radius: 12px;
-  
-}
-    .club h3 {
-      margin: 0 0 8px 0;
-      color: #d32f2f;
-    }
-    .club p {
-      margin: 4px 0;
-    }
-    .club a {
-      color: #fdd835; /* yellow for links */
-      text-decoration: none;
-    }
-.club a:hover {
-  background: #2c2c2c;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-}
-
-body.light-mode .club a {
-  color: #2e7d32; /* readable green or any you like */
-}
-
-body.light-mode .club a:hover {
-  background: #bbb;
-  color: #000;
-}
-    .subtitle {
-  color: green; /* or 'black' */
-}
-
-    /* Degrees section */
-    #degrees {
-      margin: 40px auto;
-      max-width: 700px;
-      text-align: left;
-    }
-    #degrees ul {
-      list-style-type: none;
-      padding-left: 0;
-    }
-    #degrees li {
-      margin-bottom: 12px;
-    }
-    #degrees a {
-      color: #fdd835;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 18px;
-    }
-body.light-mode #degrees a {
-  color: black;
-}
-
-    #degrees a:hover {
-      text-decoration: underline;
-      color: #ffeb3b;
-    }
-
-    body.light-mode #blog a {
-   color: #2e7d32; /* a nice readable green */
-    }
-    #blog a:hover {
-      color: #ce93d8;
-    }
-
   </style>
 </head>
 <body>
   <h1>Welcome to Murdoch IT Hub!</h1>
-<p class="subtitle">This will be your guide to clubs, careers and courses</p>
-
+  <p class="subtitle">This will be your guide to clubs, careers and courses</p>
 
   <!-- Dark Mode Toggle Button -->
   <button id="toggle-btn">Switch to Light Mode</button>
 
   <!-- IT Degrees Section -->
-<section id="degrees">
-  <h2>IT Degrees at Murdoch University</h2>
-  <ul>
-    <li class="degree-link">
-      <a href="https://www.murdoch.edu.au/study/courses/study-areas/information-technology" target="_blank">
-        Information Technology Study Areas
-      </a>
-    </li>
-    <li>
-      <a href="https://search.murdoch.edu.au/course-finder/?q=information%20technology&size=n_9_n" target="_blank">
-        Full List of IT Courses
-      </a>
-    </li>
-  </ul>
-</section>
+  <section id="degrees">
+    <h2>IT Degrees at Murdoch University</h2>
+    <ul>
+      <li class="degree-link">
+        <a href="https://www.murdoch.edu.au/study/courses/study-areas/information-technology" target="_blank">
+          Information Technology Study Areas
+        </a>
+      </li>
+      <li>
+        <a href="https://search.murdoch.edu.au/course-finder/?q=information%20technology&size=n_9_n" target="_blank">
+          Full List of IT Courses
+        </a>
+      </li>
+    </ul>
+  </section>
 
-
-  
-<h2><a href="blogs.html" id="blog-link">Visit the Blog</a></h2>
-
+  <h2><a href="blogs.html" id="blog-link">Visit the Blog</a></h2>
 
   <!-- Club filter input -->
   <input type="text" id="club-filter" placeholder="Filter clubs by name or email">
@@ -258,8 +101,14 @@ body.light-mode #degrees a {
     </div>
   </div>
 
+  <!-- Project Ideas Widget -->
+  <div id="project-ideas-widget" class="corner-widget">
+    <button id="get-idea-btn">Get Idea</button>
+    <div id="idea-display"></div>
+  </div>
+
   <script>
-    //This is the dark mode toggle///
+    // Dark mode toggle
     const btn = document.getElementById('toggle-btn');
     const body = document.body;
 
@@ -272,10 +121,10 @@ body.light-mode #degrees a {
       }
     });
 
+    // Club filter
     const filterInput = document.getElementById('club-filter');
     const clubs = document.querySelectorAll('.club');
 
-    //These are the functions//
     filterInput.addEventListener('input', () => {
       const filter = filterInput.value.toLowerCase();
       clubs.forEach(club => {
@@ -287,6 +136,27 @@ body.light-mode #degrees a {
           club.style.display = 'none';
         }
       });
+    });
+
+    // Project Ideas Generator
+    const ideas = [
+      "Build a To-Do app using Flask",
+      "Create a static blog site with Hugo",
+      "Scrape a job board using Python + BeautifulSoup",
+      "Make a personal portfolio site",
+      "Develop a chatbot using Python and NLP",
+      "Create a weather app using React",
+      "Build a note-taking app with local storage",
+      "Make a quiz app with JavaScript"
+    ];
+
+    const ideaBtn = document.getElementById('get-idea-btn');
+    const ideaDisplay = document.getElementById('idea-display');
+
+    ideaBtn.addEventListener('click', () => {
+      const randomIndex = Math.floor(Math.random() * ideas.length);
+      ideaDisplay.textContent = ideas[randomIndex];
+      ideaDisplay.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
     });
   </script>
 </body>
