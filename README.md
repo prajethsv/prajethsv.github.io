@@ -126,11 +126,20 @@ TTL: Automatic
 
 
 
-## 🔒 Step 7: Enable HTTPS via Let’s Encrypt
+## 🔒 Step 7: Enable HTTPS through CertBot
+
+
+-Install CertBot
 
 ```bash
-sudo apt install -y certbot python3-certbot-apache
-sudo certbot --apache -d murdochithub.me -d www.murdochithub.me
+sudo apt update
+sudo apt install certbot python3-certbot-apache -y
+
+```
+- Run Certbot to Enable HTTPS
+
+```
+sudo certbot --apache
 ```
 
 
