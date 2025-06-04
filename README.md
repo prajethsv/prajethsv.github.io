@@ -102,6 +102,7 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
 
 ## 🔐 Step 5: Enable UFW Firewall
 - Enabled UFW and allowed OpenSSH and Apache.
+- UFW is a firewall tool that helps control which traffic can access your server.
 - Commands used:
   ```bash
   sudo ufw allow OpenSSH
@@ -110,6 +111,8 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
   sudo ufw status
   ```
   - Check firewall with: `sudo ufw status`
+
+
 
 ![image](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
 
@@ -205,4 +208,6 @@ Security Precautions
 -Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
 -Consider setting up fail2ban or changing SSH port for extra security (optional advanced).
 
+
+include YE
 
