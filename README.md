@@ -221,6 +221,5 @@ sudo systemctl reload apache2
 - Accessed the live site from multiple devices and browsers (Chrome, Firefox, Mobile)
 - Verified HTTPS was working (padlock icon appears in browser)
 - Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
-- Verified correct file structure at `/var/www/html/` on the server
 
 ---
