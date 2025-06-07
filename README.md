@@ -8,7 +8,6 @@
 
 This project is licensed under the [MIT License](LICENSE).
 
-About This Project
 Murdoch IT Hub is a static educational website hosted on an AWS EC2 Ubuntu server. It was built for ICT171 Assignment 2 to help Murdoch University IT students explore degrees, student clubs, and career opportunities. The site is manually configured using Apache2, GitHub, and a free .me domain from the GitHub Student Developer Pack.
 
 Global IP: 52.62.110.76
