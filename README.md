@@ -2,15 +2,38 @@
 # Murdoch IT Hub  
 
 
+---
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
 
 About This Project
 Murdoch IT Hub is a static educational website hosted on an AWS EC2 Ubuntu server. It was built for ICT171 Assignment 2 to help Murdoch University IT students explore degrees, student clubs, and career opportunities. The site is manually configured using Apache2, GitHub, and a free .me domain from the GitHub Student Developer Pack.
 
 Global IP: 52.62.110.76
 
-SNS Entry: www.murdochithub.me
+DNS Entry: [www.murdochithub.me](https://murdochithub.me )
 
 GitHub Repo: https://github.com/prajethsv/prajethsv.github.io
+
+---
+
+**Video Explainer**
+A full walkthrough of all setup steps is available in the accompanying explainer video, demonstrating:
+
+- AWS EC2 setup and SSH login
+- Apache installation and firewall setup
+- GitHub repo cloning and deployment
+- Domain and DNS configuration
+- HTTPS activation using Certbot
+
+**Access the YouTube Video:** [https://youtu.be/IiRi2K8xdbo](https://youtu.be/IiRi2K8xdbo)
+
+🔐 Security Precautions
+
+-NEVER share your .pem key publicly.
+-Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
 
 
 Pre-Requisites Summary
@@ -193,23 +216,4 @@ sudo systemctl reload apache2
 - Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
 - Verified correct file structure at `/var/www/html/` on the server
 
-
-Video Explainer
-: A full walkthrough of all setup steps is available in the accompanying explainer video, demonstrating:
-- AWS EC2 setup and SSH login
-- Apache installation and firewall setup
-- GitHub repo cloning and deployment
-- Domain and DNS configuration
-- HTTPS activation using Certbot
-
-
-Security Precautions
-
--Never share your .pem key publicly.
--Use chmod 400 aws-key.pem to restrict key permissions.
--Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
--Consider setting up fail2ban or changing SSH port for extra security (optional advanced).
-
-
-include YE
 
