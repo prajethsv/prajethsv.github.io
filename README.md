@@ -222,4 +222,14 @@ sudo systemctl reload apache2
 - Verified HTTPS was working (padlock icon appears in browser)
 - Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
 
+
+Script (Auto-Deploy Website)
+
+```
+#!/bin/bash
+cd ~/prajethsv.github.io || exit 1
+git pull origin main
+sudo rsync -av --delete ~/prajethsv.github.io/ /var/www/html/
+sudo systemctl reload apache2
+```
 ---
