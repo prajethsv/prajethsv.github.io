@@ -34,17 +34,17 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 
  **⚠️⚠️⚠️ Security Precautions ⚠️⚠️⚠️**
 
--NEVER share your .pem key publicly.
--Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
+- NEVER share your .pem key publicly.
+- Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
 
 ---
 
 **⏪ Pre-Requisites Summary ⏪**
 
--AWS account with Free Tier eligibility
--GitHub account for repo hosting
--Namecheap account (GitHub Student Pack)
--Basic knowledge of SSH and Linux commands
+- AWS account with Free Tier eligibility
+- GitHub account for repo hosting
+- Namecheap account (GitHub Student Pack)
+- Basic knowledge of SSH and Linux commands
 
 ---
 
@@ -72,15 +72,15 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
 
 
 ## 🪜 Step 1: Creating an Ubuntu Instance in AWS
--Go to AWS Console
+- Go to AWS Console
 
--Navigate to EC2 → Launch Instance
--Select Ubuntu Server 22.04 LTS (Free tier eligible)
+- Navigate to EC2 → Launch Instance
+- Select Ubuntu Server 22.04 LTS (Free tier eligible)
 
--Choose a t2.micro instance (free tier)
+- Choose a t2.micro instance (free tier)
 
--Under Key pair (login):
--Create or choose a .pem file (e.g. aws-key.pem)
+- Under Key pair (login):
+- Create or choose a .pem file (e.g. aws-key.pem)
 
 - Configure its **Security Group** to allow:
   - **SSH** (port 22)  
