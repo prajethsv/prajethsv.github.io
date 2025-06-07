@@ -212,9 +212,9 @@ sudo systemctl reload apache2
 🔁 Updating the Website Later
 ```bash
 
-cd ~/prajethsv.github.io
+cd ~/[YOURGITHUBIO]
 git pull origin main
-sudo rsync -av --delete ~/prajethsv.github.io/ /var/www/html/
+sudo rsync -av --delete ~/[YOURGITHUB].github.io/ /var/www/html/
 sudo systemctl reload apache2
 ```
 
