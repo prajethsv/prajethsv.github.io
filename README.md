@@ -19,7 +19,7 @@ GitHub Repo: https://github.com/prajethsv/prajethsv.github.io
 
 ---
 
-**Video Explainer**
+**📽️ Video Explainer**
 A full walkthrough of all setup steps is available in the accompanying explainer video, demonstrating:
 
 - AWS EC2 setup and SSH login
@@ -28,15 +28,18 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 - Domain and DNS configuration
 - HTTPS activation using Certbot
 
-**Access the YouTube Video:** [https://youtu.be/IiRi2K8xdbo](https://youtu.be/IiRi2K8xdbo)
+**▶️ Access the YouTube Video: ▶️** [https://youtu.be/IiRi2K8xdbo](https://youtu.be/IiRi2K8xdbo)
 
-🔐 Security Precautions
+---
+
+ **!!⚠️⚠️⚠️ Security Precautions ⚠️⚠️⚠️!!**
 
 -NEVER share your .pem key publicly.
 -Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
 
+---
 
-Pre-Requisites Summary
+**⏪ Pre-Requisites Summary ⏪**
 
 -AWS account with Free Tier eligibility
 -GitHub account for repo hosting
@@ -65,7 +68,7 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
 
 ![image](https://github.com/user-attachments/assets/daff6d14-bb94-4e3e-ade6-ff3f93736dee)
 
-
+---
 
 ![image](https://github.com/user-attachments/assets/0a46fe3f-c23f-4b29-9a1c-5c91453946bc)
 
@@ -85,7 +88,7 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
   - **HTTP** (port 80)  
   - **HTTPS** (port 443)
  
- 
+ ---
 
 ## 🔑 Step 2: Register a Free .me Domain (Student Pack)
 1. Sign in to your Namecheap account
@@ -94,12 +97,13 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
 4. This process takes 3-4 days for them to verify
    
 https://www.namecheap.com/myaccount/login/
+
 ---
 
 
 
 
-
+---
 ## 🔌 Step 3: SSH into Your Server
 - In AWS Console → **EC2**, launch an **Ubuntu Server** instance.
 - Use this command to access your ubuntu instance 
@@ -107,12 +111,13 @@ https://www.namecheap.com/myaccount/login/
   ssh -i XXXXXX.pem ubuntu@XXXXXXXX
 ```
 
+---
  
 
 
 
 
-
+---
 ## 🌐 Step 4: Install Apache2 Web Server
 ```bash
 sudo apt update  # Updates the package list to get latest versions
@@ -120,11 +125,11 @@ sudo apt install -y apache2  # Installs Apache web server
 sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
 ```
 - If Apache doesn't start: `sudo systemctl restart apache2`
+---
 
 
 
-
-
+---
 ## 🔐 Step 5: Enable UFW Firewall
 - Enabled UFW and allowed OpenSSH and Apache.
 - UFW is a firewall tool that helps control which traffic can access your server.
@@ -141,7 +146,7 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
 
 ![image](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
 
-
+---
 
 
 
@@ -166,7 +171,7 @@ Value: murdochithub.me.
 TTL: Automatic
 ```
 
-
+---
 
 
 
@@ -188,7 +193,7 @@ sudo certbot --apache
 - If website doesn’t show: Check permissions or verify files exist in `/var/www/html`
 - If HTTPS setup fails: Re-run `sudo certbot --apache` or check DNS propagation
 
-
+---
 
 
 
@@ -216,4 +221,4 @@ sudo systemctl reload apache2
 - Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
 - Verified correct file structure at `/var/www/html/` on the server
 
-
+---
