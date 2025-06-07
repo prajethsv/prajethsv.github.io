@@ -32,7 +32,7 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 
 ---
 
- **!!⚠️⚠️⚠️ Security Precautions ⚠️⚠️⚠️!!**
+ **⚠️⚠️⚠️ Security Precautions ⚠️⚠️⚠️**
 
 -NEVER share your .pem key publicly.
 -Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
