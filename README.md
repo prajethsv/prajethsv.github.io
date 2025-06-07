@@ -70,7 +70,6 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
 
 ---
 
-![image](https://github.com/user-attachments/assets/0a46fe3f-c23f-4b29-9a1c-5c91453946bc)
 
 ## 🪜 Step 1: Creating an Ubuntu Instance in AWS
 -Go to AWS Console
@@ -87,7 +86,9 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
   - **SSH** (port 22)  
   - **HTTP** (port 80)  
   - **HTTPS** (port 443)
- 
+
+ ![image](https://github.com/user-attachments/assets/0a46fe3f-c23f-4b29-9a1c-5c91453946bc)
+
  ---
 
 ## 🔑 Step 2: Register a Free .me Domain (Student Pack)
@@ -97,6 +98,9 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
 4. This process takes 3-4 days for them to verify
    
 https://www.namecheap.com/myaccount/login/
+
+![image](https://github.com/user-attachments/assets/1db1f4a9-1870-4720-bae7-665602933f07)
+
 
 ---
 
@@ -141,8 +145,6 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
   sudo ufw status
   ```
   - Check firewall with: `sudo ufw status`
-
-
 
 ![image](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
 
