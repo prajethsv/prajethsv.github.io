@@ -44,6 +44,7 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 - GitHub account for repo hosting
 - Namecheap account (GitHub Student Pack)
 - Basic knowledge of SSH and Linux commands
+- LINK TO W3 SCHOOLS https://www.w3schools.com 
 
 ---
 
