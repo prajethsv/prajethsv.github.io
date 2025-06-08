@@ -172,7 +172,7 @@ Steps:
 
 ```bash
 Host: @  
-Value: <YOUR_EC2_IP>        ← e.g. 13.238.217.176  
+Value: <YOUR_EC2_IP>        ← e.g. 52.62.110.76
 TTL: Automatic
 ```
 
@@ -204,6 +204,8 @@ sudo apt install certbot python3-certbot-apache -y
 ```
 sudo certbot --apache
 ```
+![image](https://github.com/user-attachments/assets/f0296f3c-3092-4162-936c-83b5fd4a91c6)
+
 - If website doesn’t show: Check permissions or verify files exist in `/var/www/html`
 - If HTTPS setup fails: Re-run `sudo certbot --apache` or check DNS propagation
 
@@ -230,13 +232,10 @@ sudo rsync -av --delete ~/[YOURGITHUB]/ /var/www/html/
 sudo systemctl reload apache2
 ```
 
-- Accessed the live site from multiple devices and browsers (Chrome, Firefox, Mobile)
-- Verified HTTPS was working (padlock icon appears in browser)
-- Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
-![image](https://github.com/user-attachments/assets/ab37ad7d-04a0-4588-b093-62ed5a9ac5d2)
 
+## Script (Auto Deploy Website To Make Our Life Easier )
+A simple automation script that updates the live website by pulling the latest changes from GitHub, syncing files to the server’s web directory, and restarting Apache—making deployments quickly without the use commands run over and over again.
 
-## Script (Auto-Deploy Website To Make Our Life Easier 
 
 Create Empty Script 
 
@@ -264,8 +263,18 @@ To run program
 ```
 ./deploy.sh
 ```
----
 
+---
+## Testing and Verification
+
+- Accessed the live site from multiple devices and browsers (Chrome, Firefox, Mobile)
+- Verified HTTPS was working (padlock icon appears in browser)
+  ![Uploading image.png…]()
+
+- Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
+![image](https://github.com/user-attachments/assets/ab37ad7d-04a0-4588-b093-62ed5a9ac5d2)
+
+---
 
 ## 🪞References
 
