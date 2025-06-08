@@ -257,21 +257,13 @@ To run program
 ```
 ---
 
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 ## 🪞References
 
 -	GitHub Student Developer Pack: https://education.github.com/pack
 -	Certbot Setup Guide: https://certbot.eff.org/instructions 
 -	Murdoch IT Blog: https://www.murdoch.edu.au/news/blogs/future-in-technology 
 -	Template Credits : https://www.w3schools.com/html/default.asp  
-
-=======
->>>>>>> 4944f62 (Initial setup)
-=======
->>>>>>> d30c454 (Initial setup)
-
-
 
 
 
