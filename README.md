@@ -227,9 +227,9 @@ Script (Auto-Deploy Website)
 
 ```
 #!/bin/bash
-cd ~/prajethsv.github.io || exit 1
+cd /home/ubuntu/prajethsv.github.io || exit 1
 git pull origin main
-sudo rsync -av --delete ~/prajethsv.github.io/ /var/www/html/
+sudo rsync -av --delete /home/ubuntu/prajethsv.github.io/ /var/www/html/
 sudo systemctl reload apache2
 ```
 ---
