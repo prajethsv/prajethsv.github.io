@@ -233,3 +233,10 @@ sudo rsync -av --delete /home/ubuntu/prajethsv.github.io/ /var/www/html/
 sudo systemctl reload apache2
 ```
 ---
+
+To run program 
+
+```
+52.62.110.76
+```
+
