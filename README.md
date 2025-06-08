@@ -29,7 +29,7 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 - Domain and DNS configuration
 - HTTPS activation using Certbot
 
-**▶️ Access the YouTube Video: ▶️** https://youtu.be/KncMj4w8iRQ 
+**▶️ Access the YouTube Video: ▶️** https://youtu.be/KncMj4w8iRQ <---------------------
 
 ---
 
@@ -58,17 +58,18 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 - 🔒 HTTPS via Let’s Encrypt  
 
 ---
+
 ## 🔓 Step 0: Loggining into AWS
 - Before you can create and manage your cloud server, you need to log into your AWS account.
 
 ## What you need:
-An active AWS account. If you don’t have one, go to aws.amazon.com and sign up for free.
+
+[View Interface](https://github.com/user-attachments/assets/daff6d14-bb94-4e3e-ade6-ff3f93736dee)
+
+An active AWS account. If you don’t have one, go to [aws.amazon.com](https://shorturl.at/KXD5V 
+) and sign up for free.
 
 A valid payment method (AWS offers a free tier which is enough for this project).
-
-https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item.additionalFields.productNameLowercase&aws-products-pricing.sort-order=asc&awsf.Free%20Tier%20Type=*all&awsf.tech-category=*all
-
-![image](https://github.com/user-attachments/assets/daff6d14-bb94-4e3e-ade6-ff3f93736dee)
 
 ---
 
@@ -89,7 +90,7 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
   - **HTTP** (port 80)  
   - **HTTPS** (port 443)
 
- ![image](https://github.com/user-attachments/assets/0a46fe3f-c23f-4b29-9a1c-5c91453946bc)
+[View Screenshot](https://github.com/user-attachments/assets/0a46fe3f-c23f-4b29-9a1c-5c91453946bc)
 
  ---
 
@@ -101,15 +102,11 @@ https://aws.amazon.com/pricing/?nc2=h_ql_pr_ln&aws-products-pricing.sort-by=item
    
 https://www.namecheap.com/myaccount/login/
 
-![image](https://github.com/user-attachments/assets/1db1f4a9-1870-4720-bae7-665602933f07)
+[View Screenshot](https://github.com/user-attachments/assets/1db1f4a9-1870-4720-bae7-665602933f07)
 
 
 ---
 
-
-
-
----
 ## 🔌 Step 3: SSH into Your Server
 - In AWS Console → **EC2**, launch an **Ubuntu Server** instance.
 - Use this command to access your ubuntu instance 
@@ -118,12 +115,7 @@ https://www.namecheap.com/myaccount/login/
 ```
 
 ---
- 
 
-
-
-
----
 ## 🌐 Step 4: Install Apache2 Web Server
 ```bash
 sudo apt update  # Updates the package list to get latest versions
@@ -131,11 +123,10 @@ sudo apt install -y apache2  # Installs Apache web server
 sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
 ```
 - If Apache doesn't start: `sudo systemctl restart apache2`
+
+  
 ---
 
-
-
----
 ## 🔐 Step 5: Enable UFW Firewall
 - Enabled UFW and allowed OpenSSH and Apache.
 - UFW is a firewall tool that helps control which traffic can access your server.
@@ -148,7 +139,7 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
   ```
   - Check firewall with: `sudo ufw status`
 
-![image](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
+[View Screenshot](https://github.com/user-attachments/assets/bd355fc6-c966-485a-8d28-749fac9bcda4)
 
 ---
 
@@ -163,6 +154,10 @@ Steps:
 - Choose your EC2 instance from the dropdown and associate the Elastic IP
 - Confirm that the IP is now bound to your running server
 - Outcome: My server now has a static public IP: 52.62.110.76, which remains the same even after restarts, this is perfect for DNS mapping and public access.
+
+
+---
+
 
 ## 🌍 Step 7: Point Domain to EC2 (DNS Setup)
 
@@ -187,33 +182,7 @@ TTL: Automatic
 
 ---
 
-
-
-## 🔒 Step 8: Enable HTTPS through CertBot
-
-
--Install CertBot
-
-```bash
-sudo apt update
-sudo apt install certbot python3-certbot-apache -y
-
-```
-- Run Certbot to Enable HTTPS
-
-```
-sudo certbot --apache
-```
-![image](https://github.com/user-attachments/assets/f0296f3c-3092-4162-936c-83b5fd4a91c6)
-
-- If website doesn’t show: Check permissions or verify files exist in `/var/www/html`
-- If HTTPS setup fails: Re-run `sudo certbot --apache` or check DNS propagation
-
----
-
-
-
-## 📁 Step 9: Deploy Website from GitHub
+## 📁 Step 8: Deploy Website from GitHub
 
 - SSH into your EC2 instance:
 - Clone your repo and copy files to Apache’s document root:
@@ -231,9 +200,9 @@ git pull origin main
 sudo rsync -av --delete ~/[YOURGITHUB]/ /var/www/html/
 sudo systemctl reload apache2
 ```
+---
 
-
-## Script (Auto Deploy Website To Make Our Life Easier )
+## 📜 Step 9: Script (Auto Deploy Website To Make Our Life Easier )
 A simple automation script that updates the live website by pulling the latest changes from GitHub, syncing files to the server’s web directory, and restarting Apache—making deployments quickly without the use commands run over and over again.
 
 
@@ -265,14 +234,53 @@ To run program
 ```
 
 ---
-## Testing and Verification
 
-- Accessed the live site from multiple devices and browsers (Chrome, Firefox, Mobile)
+## 🤐 Step 10: Configuring Security Group Inbound Rules
+Navigated to the EC2 instance security group settings in the AWS Console.
+
+- Created (or modified) a security group with inbound rules allowing:
+- SSH (port 22) from 0.0.0.0/0 — enables remote terminal access from anywhere.
+- HTTP (port 80) from 0.0.0.0/0 — allows web traffic to access the website.
+- HTTPS (port 443) from 0.0.0.0/0 — enables secure web traffic over TLS/SSL.
+  - The security group inbound rules for SSH, HTTP, and HTTPS were configured and applied after initial instance setup but before final testing, ensuring full accessibility.
+
+---
+
+## 🔒 Step 11: Enable HTTPS through CertBot
+
+
+-Install CertBot
+
+```bash
+sudo apt update
+sudo apt install certbot python3-certbot-apache -y
+
+```
+- Run Certbot to Enable HTTPS
+
+```
+sudo certbot --apache
+```
+
+- If website doesn’t show: Check permissions or verify files exist in `/var/www/html`
+- If HTTPS setup fails: Re-run `sudo certbot --apache` or check DNS propagation
+
+---
+
+
+## 🧪✅ Step 12: Testing and Verification
+
+- Accessed the live site from multiple devices and browsers (Chrome, Edge, Mobile)  
+  - Mobile Portrait: [View Image](https://github.com/user-attachments/assets/0eb0129c-00c6-4221-9525-d97bce314a76)  
+  - Mobile Landscape: [View Image](https://github.com/user-attachments/assets/a4466272-393f-408c-b63b-8ae133b84143)  
+  - Chrome: [View Image](https://github.com/user-attachments/assets/62f9ff73-ef9c-455d-b5a0-24d0111e8186)  
+  - Microsoft Edge: [View Image](https://github.com/user-attachments/assets/17566ff7-cb7d-423b-ba8d-ca613707951a)
+
 - Verified HTTPS was working (padlock icon appears in browser)
   ![Uploading image.png…]()
 
 - Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
-![image](https://github.com/user-attachments/assets/ab37ad7d-04a0-4588-b093-62ed5a9ac5d2)
+[View Screenshot](https://github.com/user-attachments/assets/ab37ad7d-04a0-4588-b093-62ed5a9ac5d2)
 
 ---
 
