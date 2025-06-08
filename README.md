@@ -277,7 +277,7 @@ sudo certbot --apache
   - Microsoft Edge: [View Image](https://github.com/user-attachments/assets/17566ff7-cb7d-423b-ba8d-ca613707951a)
 
 - Verified HTTPS was working (padlock icon appears in browser)
-  ![Uploading image.png…]()
+[View Screenshot](https://github.com/user-attachments/assets/10079e73-8229-43e7-b901-a5a5e1aacf99)
 
 - Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
 [View Screenshot](https://github.com/user-attachments/assets/ab37ad7d-04a0-4588-b093-62ed5a9ac5d2)
