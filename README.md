@@ -1,6 +1,7 @@
 # ICT171 Assignment 2 – Cloud Server Setup  
 # Murdoch IT Hub  
 
+![image](https://github.com/user-attachments/assets/92b8fa53-9f84-43c7-8f72-2c32ad133bc0)
 
 ---
 
@@ -9,6 +10,8 @@
 This project is licensed under the [Apache License 2.0](LICENSE).
 
 Murdoch IT Hub is a static educational website hosted on an AWS EC2 Ubuntu server. It was built for ICT171 Assignment 2 to help Murdoch University IT students explore degrees, student clubs, and career opportunities. The site is manually configured using Apache2, GitHub, and a free .me domain from the GitHub Student Developer Pack.
+
+
 
 Global IP: 52.62.110.76
 
@@ -224,7 +227,7 @@ sudo systemctl reload apache2
 ![image](https://github.com/user-attachments/assets/ab37ad7d-04a0-4588-b093-62ed5a9ac5d2)
 
 
-Script (Auto-Deploy Website To Make Our Life Easier
+## 🔄️ Step 9: Script (Auto-Deploy Website To Make Our Life Easier 
 
 ```
 #!/bin/bash
@@ -239,3 +242,11 @@ To run program
 ./deploy.sh
 ```
 ---
+
+## 🪞References
+
+-	GitHub Student Developer Pack: https://education.github.com/pack
+-	Certbot Setup Guide: https://certbot.eff.org/instructions 
+-	Murdoch IT Blog: https://www.murdoch.edu.au/news/blogs/future-in-technology 
+-	Template Credits : https://www.w3schools.com/html/default.asp  
+
