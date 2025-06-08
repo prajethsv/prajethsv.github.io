@@ -27,7 +27,7 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 - Domain and DNS configuration
 - HTTPS activation using Certbot
 
-**▶️ Access the YouTube Video: ▶️** [https://youtu.be/IiRi2K8xdbo](https://youtu.be/IiRi2K8xdbo)
+**▶️ Access the YouTube Video: ▶️** [https://youtu.be/IiRi2K8xdbo]([https://youtu.be/IiRi2K8xdbo](https://youtu.be/KncMj4w8iRQ))
 
 ---
 
