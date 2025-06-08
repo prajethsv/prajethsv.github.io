@@ -229,6 +229,13 @@ sudo systemctl reload apache2
 
 ## 🔄️ Step 9: Script (Auto-Deploy Website To Make Our Life Easier 
 
+Create Empty Script 
+
+```
+nano ~/deploy.sh
+```
+
+Paste this in your script, replacing the [YOURGITHUBIO]
 ```
 #!/bin/bash
 cd /home/ubuntu/[YOURGITHUBIO] || exit 1
@@ -236,6 +243,13 @@ git pull origin main
 sudo rsync -av --delete /home/ubuntu/[YOURGITHUB]/ /var/www/html/
 sudo systemctl reload apache2
 ```
+Make the script run 
+
+```
+chmod +x ~/deploy.sh
+```
+
+
 To run program 
 
 ```
