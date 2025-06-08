@@ -1,5 +1,5 @@
 # ICT171 Assignment 2 – Cloud Server Setup  
-# Murdoch IT Hub  
+## Murdoch IT Hub  
 
 ---
 
@@ -12,7 +12,7 @@ Murdoch IT Hub is a static educational website hosted on an AWS EC2 Ubuntu serve
 
 
 Global IP: 52.62.110.76
-🔐 Note: The global IP will show a certificate warning due to SSL not applying to raw IPs. Please use the DNS Entry Below for secure access.
+- 🔐 Note: The global IP will show a certificate warning due to SSL not applying to raw IPs. Please use the DNS Entry Below for secure access.
 
 DNS Entry: [www.murdochithub.me](https://murdochithub.me )
 
