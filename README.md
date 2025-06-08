@@ -1,8 +1,6 @@
 # ICT171 Assignment 2 – Cloud Server Setup  
 # Murdoch IT Hub  
 
-![image](https://github.com/user-attachments/assets/92b8fa53-9f84-43c7-8f72-2c32ad133bc0)
-
 ---
 
 ## License
@@ -14,6 +12,7 @@ Murdoch IT Hub is a static educational website hosted on an AWS EC2 Ubuntu serve
 
 
 Global IP: 52.62.110.76
+🔐 Note: The global IP will show a certificate warning due to SSL not applying to raw IPs. Please use the DNS Entry Below for secure access.
 
 DNS Entry: [www.murdochithub.me](https://murdochithub.me )
 
@@ -153,9 +152,19 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
 
 ---
 
+## ➕ Step 6: Setting up an Elastic IP Address
+To ensure a consistent and public-facing IP address, an Elastic IP was set up and associated with the EC2 instance.
 
+Steps:
 
-## 🌍 Step 6: Point Domain to EC2 (DNS Setup)
+In the AWS EC2 dashboard, under "Elastic IPs", click "Allocate Elastic IP address"
+Keep the default options and click "Allocate"
+After allocation, click "Actions" → "Associate Elastic IP address"
+Choose your EC2 instance from the dropdown and associate the Elastic IP
+Confirm that the IP is now bound to your running server
+Outcome: My server now has a static public IP: 52.62.110.76, which remains the same even after restarts, this is perfect for DNS mapping and public access.
+
+## 🌍 Step 7: Point Domain to EC2 (DNS Setup)
 
 - In Namecheap → Domain List → Manage → Advanced DNS.
 - Under Host Records, add an A record:
@@ -180,7 +189,7 @@ TTL: Automatic
 
 
 
-## 🔒 Step 7: Enable HTTPS through CertBot
+## 🔒 Step 8: Enable HTTPS through CertBot
 
 
 -Install CertBot
@@ -202,7 +211,7 @@ sudo certbot --apache
 
 
 
-## 📁 Step 8: Deploy Website from GitHub
+## 📁 Step 9: Deploy Website from GitHub
 
 - SSH into your EC2 instance:
 - Clone your repo and copy files to Apache’s document root:
@@ -227,7 +236,7 @@ sudo systemctl reload apache2
 ![image](https://github.com/user-attachments/assets/ab37ad7d-04a0-4588-b093-62ed5a9ac5d2)
 
 
-## 🔄️ Step 9: Script (Auto-Deploy Website To Make Our Life Easier 
+## Script (Auto-Deploy Website To Make Our Life Easier 
 
 Create Empty Script 
 
