@@ -46,7 +46,7 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 - GitHub account for repo hosting
 - Namecheap account (GitHub Student Pack)
 - Basic knowledge of SSH and Linux commands
-- LINK TO W3 SCHOOLS https://www.w3schools.com 
+- Link to W3 Schools https://www.w3schools.com 
 
 ---
 
@@ -157,12 +157,12 @@ To ensure a consistent and public-facing IP address, an Elastic IP was set up an
 
 Steps:
 
-In the AWS EC2 dashboard, under "Elastic IPs", click "Allocate Elastic IP address"
-Keep the default options and click "Allocate"
-After allocation, click "Actions" → "Associate Elastic IP address"
-Choose your EC2 instance from the dropdown and associate the Elastic IP
-Confirm that the IP is now bound to your running server
-Outcome: My server now has a static public IP: 52.62.110.76, which remains the same even after restarts, this is perfect for DNS mapping and public access.
+- In the AWS EC2 dashboard, under "Elastic IPs", click "Allocate Elastic IP address"
+- Keep the default options and click "Allocate"
+- After allocation, click "Actions" → "Associate Elastic IP address"
+- Choose your EC2 instance from the dropdown and associate the Elastic IP
+- Confirm that the IP is now bound to your running server
+- Outcome: My server now has a static public IP: 52.62.110.76, which remains the same even after restarts, this is perfect for DNS mapping and public access.
 
 ## 🌍 Step 7: Point Domain to EC2 (DNS Setup)
 
