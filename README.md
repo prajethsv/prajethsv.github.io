@@ -223,7 +223,7 @@ sudo systemctl reload apache2
 - Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
 
 
-Script (Auto-Deploy Website)
+Script (Auto-Deploy Website To Make Our Life Easier
 
 ```
 #!/bin/bash
@@ -232,11 +232,9 @@ git pull origin main
 sudo rsync -av --delete /home/ubuntu/prajethsv.github.io/ /var/www/html/
 sudo systemctl reload apache2
 ```
----
-
 To run program 
 
 ```
-52.62.110.76
+./deploy.sh
 ```
-
+---
