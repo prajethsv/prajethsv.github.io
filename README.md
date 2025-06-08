@@ -214,22 +214,23 @@ sudo systemctl reload apache2
 
 cd ~/[YOURGITHUBIO]
 git pull origin main
-sudo rsync -av --delete ~/[YOURGITHUB].github.io/ /var/www/html/
+sudo rsync -av --delete ~/[YOURGITHUB]/ /var/www/html/
 sudo systemctl reload apache2
 ```
 
 - Accessed the live site from multiple devices and browsers (Chrome, Firefox, Mobile)
 - Verified HTTPS was working (padlock icon appears in browser)
 - Ran `curl -I http://murdochithub.me` to confirm HTTP 200 response
+![image](https://github.com/user-attachments/assets/ab37ad7d-04a0-4588-b093-62ed5a9ac5d2)
 
 
 Script (Auto-Deploy Website To Make Our Life Easier
 
 ```
 #!/bin/bash
-cd /home/ubuntu/prajethsv.github.io || exit 1
+cd /home/ubuntu/[YOURGITHUBIO] || exit 1
 git pull origin main
-sudo rsync -av --delete /home/ubuntu/prajethsv.github.io/ /var/www/html/
+sudo rsync -av --delete /home/ubuntu/[YOURGITHUB]/ /var/www/html/
 sudo systemctl reload apache2
 ```
 To run program 
