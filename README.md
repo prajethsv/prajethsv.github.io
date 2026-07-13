@@ -12,7 +12,7 @@ Murdoch IT Hub is a static educational website hosted on an AWS EC2 Ubuntu serve
 
 
 Global IP: 52.62.110.76
-- 🔐 Note: The global IP will show a certificate warning due to SSL not applying to raw IPs. Please use the DNS Entry Below for secure access.
+- Note: The global IP will show a certificate warning due to SSL not applying to raw IPs. Please use the DNS Entry Below for secure access.
 
 DNS Entry: [www.murdochithub.me](https://murdochithub.me )
 
@@ -20,7 +20,7 @@ GitHub Repo: https://github.com/prajethsv/prajethsv.github.io
 
 ---
 
-**📽️ Video Explainer**
+**Video Explainer**
 A full walkthrough of all setup steps is available in the accompanying explainer video, demonstrating:
 
 - AWS EC2 setup and SSH login
@@ -29,18 +29,18 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 - Domain and DNS configuration
 - HTTPS activation using Certbot
 
-**▶️ Access the YouTube Video: ▶️** https://youtu.be/KncMj4w8iRQ <---------------------
+**Access the YouTube Video: ** https://youtu.be/KncMj4w8iRQ <---------------------
 
 ---
 
- **⚠️⚠️⚠️ Security Precautions ⚠️⚠️⚠️**
+ **Security Precautions**
 
 - NEVER share your .pem key publicly.
 - Keep your Ubuntu instance updated regularly with sudo apt update && sudo apt upgrade -y.
 
 ---
 
-**⏪ Pre-Requisites Summary ⏪**
+** Pre-Requisites Summary **
 
 - AWS account with Free Tier eligibility
 - GitHub account for repo hosting
@@ -51,15 +51,15 @@ A full walkthrough of all setup steps is available in the accompanying explainer
 ---
 
 ## Features
-- 🌑 Dark mode toggle (JavaScript)  
-- 🎓 Links to Murdoch IT degrees  
-- 🕹️ Club details and contact links  
-- 🛠️ Hosted via Apache2 on Ubuntu server  
-- 🔒 HTTPS via Let’s Encrypt  
+- Dark mode toggle (JavaScript)  
+- Links to Murdoch IT degrees  
+- Club details and contact links  
+- Hosted via Apache2 on Ubuntu server  
+- HTTPS via Let’s Encrypt  
 
 ---
 
-## 🔓 Step 0: Loggining into AWS
+## Step 0: Loggining into AWS
 - Before you can create and manage your cloud server, you need to log into your AWS account.
 
 ## What you need:
@@ -74,7 +74,7 @@ A valid payment method (AWS offers a free tier which is enough for this project)
 ---
 
 
-## 🪜 Step 1: Creating an Ubuntu Instance in AWS
+## Step 1: Creating an Ubuntu Instance in AWS
 - Go to AWS Console
 
 - Navigate to EC2 → Launch Instance
@@ -94,7 +94,7 @@ A valid payment method (AWS offers a free tier which is enough for this project)
 
  ---
 
-## 🔑 Step 2: Register a Free .me Domain (Student Pack)
+## Step 2: Register a Free .me Domain (Student Pack)
 1. Sign in to your Namecheap account
 2. Use the GitHub Student Developer Pack discount to register a `.me` domain for free.  
 3. Verify ownership via the Namecheap dashboard.
@@ -107,7 +107,7 @@ https://www.namecheap.com/myaccount/login/
 
 ---
 
-## 🔌 Step 3: SSH into Your Server
+## Step 3: SSH into Your Server
 - In AWS Console → **EC2**, launch an **Ubuntu Server** instance.
 - Use this command to access your ubuntu instance 
  ```bash
@@ -116,7 +116,7 @@ https://www.namecheap.com/myaccount/login/
 
 ---
 
-## 🌐 Step 4: Install Apache2 Web Server
+## Step 4: Install Apache2 Web Server
 ```bash
 sudo apt update  # Updates the package list to get latest versions
 sudo apt install -y apache2  # Installs Apache web server
@@ -127,7 +127,7 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
   
 ---
 
-## 🔐 Step 5: Enable UFW Firewall
+## Step 5: Enable UFW Firewall
 - Enabled UFW and allowed OpenSSH and Apache.
 - UFW is a firewall tool that helps control which traffic can access your server.
 - Commands used:
@@ -143,7 +143,7 @@ sudo systemctl enable --now apache2 # Starts Apache and enables it at boot
 
 ---
 
-## ➕ Step 6: Setting up an Elastic IP Address
+## Step 6: Setting up an Elastic IP Address
 To ensure a consistent and public-facing IP address, an Elastic IP was set up and associated with the EC2 instance.
 
 Steps:
@@ -159,7 +159,7 @@ Steps:
 ---
 
 
-## 🌍 Step 7: Point Domain to EC2 (DNS Setup)
+## Step 7: Point Domain to EC2 (DNS Setup)
 
 - In Namecheap → Domain List → Manage → Advanced DNS.
 - Under Host Records, add an A record:
@@ -182,7 +182,7 @@ TTL: Automatic
 
 ---
 
-## 📁 Step 8: Deploy Website from GitHub
+## Step 8: Deploy Website from GitHub
 
 - SSH into your EC2 instance:
 - Clone your repo and copy files to Apache’s document root:
@@ -192,7 +192,7 @@ git clone https://github.com/prajethsv/prajethsv.github.io.git
 sudo rsync -av --delete ~/prajethsv.github.io/ /var/www/html/
 sudo systemctl reload apache2
 ```
-🔁 Updating the Website Later
+Updating the Website Later
 ```bash
 
 cd ~/[YOURGITHUBIO]
@@ -202,7 +202,7 @@ sudo systemctl reload apache2
 ```
 ---
 
-## 📜 Step 9: Script (Auto Deploy Website To Make Our Life Easier )
+## Step 9: Script (Auto Deploy Website To Make Our Life Easier )
 A simple automation script that updates the live website by pulling the latest changes from GitHub, syncing files to the server’s web directory, and restarting Apache—making deployments quickly without the use commands run over and over again.
 
 
@@ -235,7 +235,7 @@ To run program
 
 ---
 
-## 🤐 Step 10: Configuring Security Group Inbound Rules
+## Step 10: Configuring Security Group Inbound Rules
 Navigated to the EC2 instance security group settings in the AWS Console.
 
 - Created (or modified) a security group with inbound rules allowing:
@@ -246,7 +246,7 @@ Navigated to the EC2 instance security group settings in the AWS Console.
 
 ---
 
-## 🔒 Step 11: Enable HTTPS through CertBot
+## Step 11: Enable HTTPS through CertBot
 
 
 -Install CertBot
@@ -268,7 +268,7 @@ sudo certbot --apache
 ---
 
 
-## 🧪✅ Step 12: Testing and Verification
+## Step 12: Testing and Verification
 
 - Accessed the live site from multiple devices and browsers (Chrome, Edge, Mobile)  
   - Mobile Portrait: [View Image](https://github.com/user-attachments/assets/0eb0129c-00c6-4221-9525-d97bce314a76)  
